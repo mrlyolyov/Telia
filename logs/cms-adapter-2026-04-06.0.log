@@ -1,0 +1,212 @@
+2026-04-06 14:38:53 [main] INFO  c.o.c.care.adapter.OptimaCareAdapter - Starting OptimaCareAdapter using Java 21 with PID 27324 (C:\cms-care-adapter\target\classes started by marinl in C:\cms-care-adapter)
+2026-04-06 14:38:53 [main] INFO  c.o.c.care.adapter.OptimaCareAdapter - No active profile set, falling back to 1 default profile: "default"
+2026-04-06 14:38:58 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 9090 (http)
+2026-04-06 14:38:58 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-04-06 14:38:58 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.53]
+2026-04-06 14:38:58 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-04-06 14:38:58 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 4913 ms
+2026-04-06 14:39:00 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 9090 (http) with context path '/'
+2026-04-06 14:39:00 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 9091 (http)
+2026-04-06 14:39:00 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-04-06 14:39:00 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.53]
+2026-04-06 14:39:00 [main] INFO  o.a.c.c.C.[Tomcat-1].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-04-06 14:39:00 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 211 ms
+2026-04-06 14:39:00 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 3 endpoints beneath base path '/actuator'
+2026-04-06 14:39:01 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 9091 (http) with context path '/'
+2026-04-06 14:39:01 [main] INFO  o.a.c.i.engine.AbstractCamelContext - Apache Camel 4.18.0 (camel-1) is starting
+2026-04-06 14:39:01 [main] INFO  o.a.c.i.engine.AbstractCamelContext - Routes startup (total:0)
+2026-04-06 14:39:01 [main] INFO  o.a.c.i.engine.AbstractCamelContext - Apache Camel 4.18.0 (camel-1) started in 19ms (build:0ms init:0ms start:19ms boot:1s604ms)
+2026-04-06 14:39:01 [main] INFO  c.o.c.care.adapter.OptimaCareAdapter - Started OptimaCareAdapter in 9.222 seconds (process running for 10.469)
+2026-04-06 14:39:58 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-04-06 14:39:58 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-04-06 14:39:58 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-04-06 14:39:58 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-04-06 14:39:58 [SpringApplicationShutdownHook] INFO  o.a.c.i.engine.AbstractCamelContext - Apache Camel 4.18.0 (camel-1) is shutting down (timeout:45s)
+2026-04-06 14:39:58 [SpringApplicationShutdownHook] INFO  o.a.c.i.engine.AbstractCamelContext - Routes stopped (total:0)
+2026-04-06 14:39:58 [SpringApplicationShutdownHook] INFO  o.a.c.i.engine.AbstractCamelContext - Apache Camel 4.18.0 (camel-1) shutdown in 7ms (uptime:57s)
+2026-04-06 14:44:47 [main] INFO  c.o.c.care.adapter.OptimaCareAdapter - Starting OptimaCareAdapter using Java 21 with PID 14476 (C:\cms-care-adapter\target\classes started by marinl in C:\cms-care-adapter)
+2026-04-06 14:44:47 [main] INFO  c.o.c.care.adapter.OptimaCareAdapter - No active profile set, falling back to 1 default profile: "default"
+2026-04-06 14:44:51 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 9090 (http)
+2026-04-06 14:44:51 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-04-06 14:44:51 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.53]
+2026-04-06 14:44:51 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-04-06 14:44:51 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3640 ms
+2026-04-06 14:44:54 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 9090 (http) with context path '/'
+2026-04-06 14:44:54 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 9091 (http)
+2026-04-06 14:44:54 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-04-06 14:44:54 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.53]
+2026-04-06 14:44:54 [main] INFO  o.a.c.c.C.[Tomcat-1].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-04-06 14:44:54 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 357 ms
+2026-04-06 14:44:54 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 3 endpoints beneath base path '/actuator'
+2026-04-06 14:44:54 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 9091 (http) with context path '/'
+2026-04-06 14:44:54 [main] INFO  o.a.c.i.engine.AbstractCamelContext - Apache Camel 4.18.0 (camel-1) is starting
+2026-04-06 14:44:54 [main] INFO  o.a.c.i.engine.AbstractCamelContext - Routes startup (total:0)
+2026-04-06 14:44:54 [main] INFO  o.a.c.i.engine.AbstractCamelContext - Apache Camel 4.18.0 (camel-1) started in 25ms (build:0ms init:0ms start:25ms boot:2s400ms)
+2026-04-06 14:44:54 [main] INFO  c.o.c.care.adapter.OptimaCareAdapter - Started OptimaCareAdapter in 8.624 seconds (process running for 9.25)
+2026-04-06 14:44:55 [main] INFO  c.o.c.care.adapter.OptimaCareAdapter - Optima CMS adapter application has started..
+2026-04-06 14:45:23 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-04-06 14:45:23 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-04-06 14:45:23 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-04-06 14:45:23 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-04-06 14:45:23 [SpringApplicationShutdownHook] INFO  o.a.c.i.engine.AbstractCamelContext - Apache Camel 4.18.0 (camel-1) is shutting down (timeout:45s)
+2026-04-06 14:45:23 [SpringApplicationShutdownHook] INFO  o.a.c.i.engine.AbstractCamelContext - Routes stopped (total:0)
+2026-04-06 14:45:23 [SpringApplicationShutdownHook] INFO  o.a.c.i.engine.AbstractCamelContext - Apache Camel 4.18.0 (camel-1) shutdown in 7ms (uptime:28s)
+2026-04-06 14:53:23 [main] INFO  c.o.c.c.a.AdapterApplicationTests - Starting AdapterApplicationTests using Java 21 with PID 44836 (started by marinl in C:\cms-care-adapter)
+2026-04-06 14:53:23 [main] INFO  c.o.c.c.a.AdapterApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2026-04-06 14:53:26 [main] INFO  o.a.c.i.engine.AbstractCamelContext - Apache Camel 4.18.0 (camel-1) is starting
+2026-04-06 14:53:26 [main] INFO  o.a.c.i.engine.AbstractCamelContext - Routes startup (total:0)
+2026-04-06 14:53:26 [main] INFO  o.a.c.i.engine.AbstractCamelContext - Apache Camel 4.18.0 (camel-1) started in 10ms (build:0ms init:0ms start:10ms boot:791ms)
+2026-04-06 14:53:26 [main] INFO  c.o.c.c.a.AdapterApplicationTests - Started AdapterApplicationTests in 3.152 seconds (process running for 4.643)
+2026-04-06 14:53:27 [SpringApplicationShutdownHook] INFO  o.a.c.i.engine.AbstractCamelContext - Apache Camel 4.18.0 (camel-1) is shutting down (timeout:45s)
+2026-04-06 14:53:27 [SpringApplicationShutdownHook] INFO  o.a.c.i.engine.AbstractCamelContext - Routes stopped (total:0)
+2026-04-06 14:53:27 [SpringApplicationShutdownHook] INFO  o.a.c.i.engine.AbstractCamelContext - Apache Camel 4.18.0 (camel-1) shutdown in 10ms (uptime:1s)
+2026-04-06 14:53:47 [main] INFO  c.o.c.care.adapter.OptimaCareAdapter - Starting OptimaCareAdapter using Java 21 with PID 30204 (C:\cms-care-adapter\target\classes started by marinl in C:\cms-care-adapter)
+2026-04-06 14:53:47 [main] INFO  c.o.c.care.adapter.OptimaCareAdapter - No active profile set, falling back to 1 default profile: "default"
+2026-04-06 14:53:48 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 9090 (http)
+2026-04-06 14:53:48 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-04-06 14:53:48 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.53]
+2026-04-06 14:53:48 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-04-06 14:53:48 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1726 ms
+2026-04-06 14:53:50 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 9090 (http) with context path '/'
+2026-04-06 14:53:50 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 9091 (http)
+2026-04-06 14:53:50 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-04-06 14:53:50 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.53]
+2026-04-06 14:53:50 [main] INFO  o.a.c.c.C.[Tomcat-1].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-04-06 14:53:50 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 107 ms
+2026-04-06 14:53:50 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 3 endpoints beneath base path '/actuator'
+2026-04-06 14:53:50 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 9091 (http) with context path '/'
+2026-04-06 14:53:50 [main] INFO  o.a.c.i.engine.AbstractCamelContext - Apache Camel 4.18.0 (camel-1) is starting
+2026-04-06 14:53:50 [main] INFO  o.a.c.i.engine.AbstractCamelContext - Routes startup (total:0)
+2026-04-06 14:53:50 [main] INFO  o.a.c.i.engine.AbstractCamelContext - Apache Camel 4.18.0 (camel-1) started in 13ms (build:0ms init:0ms start:13ms boot:921ms)
+2026-04-06 14:53:50 [main] INFO  c.o.c.care.adapter.OptimaCareAdapter - Started OptimaCareAdapter in 3.833 seconds (process running for 4.211)
+2026-04-06 14:53:50 [main] INFO  c.o.c.care.adapter.OptimaCareAdapter - Optima CMS adapter application has started...
+2026-04-06 14:54:35 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-04-06 14:54:35 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-04-06 14:54:35 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-04-06 14:54:35 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-04-06 14:54:35 [SpringApplicationShutdownHook] INFO  o.a.c.i.engine.AbstractCamelContext - Apache Camel 4.18.0 (camel-1) is shutting down (timeout:45s)
+2026-04-06 14:54:35 [SpringApplicationShutdownHook] INFO  o.a.c.i.engine.AbstractCamelContext - Routes stopped (total:0)
+2026-04-06 14:54:35 [SpringApplicationShutdownHook] INFO  o.a.c.i.engine.AbstractCamelContext - Apache Camel 4.18.0 (camel-1) shutdown in 5ms (uptime:45s)
+2026-04-06 14:55:45 [main] INFO  c.o.c.care.adapter.OptimaCareAdapter - Starting OptimaCareAdapter using Java 21 with PID 11748 (C:\cms-care-adapter\target\classes started by marinl in C:\cms-care-adapter)
+2026-04-06 14:55:45 [main] INFO  c.o.c.care.adapter.OptimaCareAdapter - No active profile set, falling back to 1 default profile: "default"
+2026-04-06 14:55:48 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 9090 (http)
+2026-04-06 14:55:48 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-04-06 14:55:48 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.53]
+2026-04-06 14:55:49 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-04-06 14:55:49 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3577 ms
+2026-04-06 14:55:51 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 9090 (http) with context path '/'
+2026-04-06 14:55:51 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 9091 (http)
+2026-04-06 14:55:51 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-04-06 14:55:51 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.53]
+2026-04-06 14:55:51 [main] INFO  o.a.c.c.C.[Tomcat-1].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-04-06 14:55:51 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 253 ms
+2026-04-06 14:55:51 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 3 endpoints beneath base path '/actuator'
+2026-04-06 14:55:51 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 9091 (http) with context path '/'
+2026-04-06 14:55:52 [main] INFO  o.a.c.i.engine.AbstractCamelContext - Apache Camel 4.18.0 (camel-1) is starting
+2026-04-06 14:55:52 [main] INFO  o.a.c.i.engine.AbstractCamelContext - Routes startup (total:0)
+2026-04-06 14:55:52 [main] INFO  o.a.c.i.engine.AbstractCamelContext - Apache Camel 4.18.0 (camel-1) started in 21ms (build:0ms init:0ms start:21ms boot:1s933ms)
+2026-04-06 14:55:52 [main] INFO  c.o.c.care.adapter.OptimaCareAdapter - Started OptimaCareAdapter in 7.318 seconds (process running for 7.761)
+2026-04-06 14:55:52 [main] INFO  c.o.c.care.adapter.OptimaCareAdapter - Optima CMS adapter application has started...
+2026-04-06 14:56:01 [http-nio-9090-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-04-06 14:56:01 [http-nio-9090-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-04-06 14:56:01 [http-nio-9090-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2026-04-06 14:56:19 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-04-06 14:56:19 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-04-06 14:56:19 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-04-06 14:56:19 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-04-06 14:56:19 [SpringApplicationShutdownHook] INFO  o.a.c.i.engine.AbstractCamelContext - Apache Camel 4.18.0 (camel-1) is shutting down (timeout:45s)
+2026-04-06 14:56:19 [SpringApplicationShutdownHook] INFO  o.a.c.i.engine.AbstractCamelContext - Routes stopped (total:0)
+2026-04-06 14:56:19 [SpringApplicationShutdownHook] INFO  o.a.c.i.engine.AbstractCamelContext - Apache Camel 4.18.0 (camel-1) shutdown in 4ms (uptime:27s)
+2026-04-06 14:56:27 [main] INFO  c.o.c.care.adapter.OptimaCareAdapter - Starting OptimaCareAdapter using Java 21 with PID 34592 (C:\cms-care-adapter\target\classes started by marinl in C:\cms-care-adapter)
+2026-04-06 14:56:27 [main] INFO  c.o.c.care.adapter.OptimaCareAdapter - No active profile set, falling back to 1 default profile: "default"
+2026-04-06 14:56:30 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 9090 (http)
+2026-04-06 14:56:30 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-04-06 14:56:30 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.53]
+2026-04-06 14:56:30 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-04-06 14:56:30 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3396 ms
+2026-04-06 14:56:32 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 9090 (http) with context path '/'
+2026-04-06 14:56:33 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 9091 (http)
+2026-04-06 14:56:33 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-04-06 14:56:33 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.53]
+2026-04-06 14:56:33 [main] INFO  o.a.c.c.C.[Tomcat-1].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-04-06 14:56:33 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 430 ms
+2026-04-06 14:56:33 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 3 endpoints beneath base path '/actuator'
+2026-04-06 14:56:33 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 9091 (http) with context path '/'
+2026-04-06 14:56:33 [main] INFO  o.a.c.i.engine.AbstractCamelContext - Apache Camel 4.18.0 (camel-1) is starting
+2026-04-06 14:56:33 [main] INFO  o.a.c.i.engine.AbstractCamelContext - Routes startup (total:0)
+2026-04-06 14:56:33 [main] INFO  o.a.c.i.engine.AbstractCamelContext - Apache Camel 4.18.0 (camel-1) started in 35ms (build:0ms init:0ms start:35ms boot:2s211ms)
+2026-04-06 14:56:33 [main] INFO  c.o.c.care.adapter.OptimaCareAdapter - Started OptimaCareAdapter in 8.3 seconds (process running for 9.171)
+2026-04-06 14:56:33 [main] INFO  c.o.c.care.adapter.OptimaCareAdapter - Optima CMS adapter application has started...
+2026-04-06 14:56:36 [http-nio-9090-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-04-06 14:56:36 [http-nio-9090-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-04-06 14:56:36 [http-nio-9090-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2026-04-06 14:56:36 [http-nio-9090-exec-1] INFO  c.o.c.c.adapter.api.DummyController - ping
+2026-04-06 14:57:09 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-04-06 14:57:09 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-04-06 14:57:09 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-04-06 14:57:09 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-04-06 14:57:09 [SpringApplicationShutdownHook] INFO  o.a.c.i.engine.AbstractCamelContext - Apache Camel 4.18.0 (camel-1) is shutting down (timeout:45s)
+2026-04-06 14:57:09 [SpringApplicationShutdownHook] INFO  o.a.c.i.engine.AbstractCamelContext - Routes stopped (total:0)
+2026-04-06 14:57:09 [SpringApplicationShutdownHook] INFO  o.a.c.i.engine.AbstractCamelContext - Apache Camel 4.18.0 (camel-1) shutdown in 7ms (uptime:36s)
+2026-04-06 15:02:46 [main] INFO  c.o.c.care.adapter.OptimaCareAdapter - Starting OptimaCareAdapter using Java 21 with PID 23084 (C:\cms-care-adapter\target\classes started by marinl in C:\cms-care-adapter)
+2026-04-06 15:02:46 [main] INFO  c.o.c.care.adapter.OptimaCareAdapter - No active profile set, falling back to 1 default profile: "default"
+2026-04-06 15:02:49 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 9090 (http)
+2026-04-06 15:02:49 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-04-06 15:02:49 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.53]
+2026-04-06 15:02:49 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-04-06 15:02:49 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3012 ms
+2026-04-06 15:02:51 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 9090 (http) with context path '/'
+2026-04-06 15:02:51 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 9091 (http)
+2026-04-06 15:02:51 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-04-06 15:02:51 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.53]
+2026-04-06 15:02:51 [main] INFO  o.a.c.c.C.[Tomcat-1].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-04-06 15:02:51 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 114 ms
+2026-04-06 15:02:51 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 3 endpoints beneath base path '/actuator'
+2026-04-06 15:02:51 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 9091 (http) with context path '/'
+2026-04-06 15:02:52 [main] INFO  o.a.c.i.engine.AbstractCamelContext - Apache Camel 4.18.0 (camel-1) is starting
+2026-04-06 15:02:52 [main] INFO  o.a.c.i.engine.AbstractCamelContext - Routes startup (total:1)
+2026-04-06 15:02:52 [main] INFO  o.a.c.i.engine.AbstractCamelContext -     Started dummy-heartbeat (timer://dummy-heartbeat)
+2026-04-06 15:02:52 [main] INFO  o.a.c.i.engine.AbstractCamelContext - Apache Camel 4.18.0 (camel-1) started in 13ms (build:0ms init:0ms start:13ms boot:1s845ms)
+2026-04-06 15:02:52 [main] INFO  c.o.c.care.adapter.OptimaCareAdapter - Started OptimaCareAdapter in 5.832 seconds (process running for 6.268)
+2026-04-06 15:02:52 [main] INFO  c.o.c.care.adapter.OptimaCareAdapter - Optima CMS adapter application has started...
+2026-04-06 15:02:53 [Camel (camel-1) thread #1 - timer://dummy-heartbeat] INFO  dummy-heartbeat - Dummy Camel route heartbeat
+2026-04-06 15:03:53 [Camel (camel-1) thread #1 - timer://dummy-heartbeat] INFO  dummy-heartbeat - Dummy Camel route heartbeat
+2026-04-06 15:04:32 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-04-06 15:04:32 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-04-06 15:04:32 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-04-06 15:04:32 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-04-06 15:04:32 [SpringApplicationShutdownHook] INFO  o.a.c.i.engine.AbstractCamelContext - Apache Camel 4.18.0 (camel-1) is shutting down (timeout:45s)
+2026-04-06 15:04:32 [SpringApplicationShutdownHook] INFO  o.a.c.i.engine.AbstractCamelContext - Routes stopped (total:1)
+2026-04-06 15:04:32 [SpringApplicationShutdownHook] INFO  o.a.c.i.engine.AbstractCamelContext -     Stopped dummy-heartbeat (timer://dummy-heartbeat)
+2026-04-06 15:04:32 [SpringApplicationShutdownHook] INFO  o.a.c.i.engine.AbstractCamelContext - Apache Camel 4.18.0 (camel-1) shutdown in 8ms (uptime:1m40s)
+2026-04-06 15:04:36 [main] INFO  c.o.c.care.adapter.OptimaCareAdapter - Starting OptimaCareAdapter using Java 21 with PID 29548 (C:\cms-care-adapter\target\classes started by marinl in C:\cms-care-adapter)
+2026-04-06 15:04:36 [main] INFO  c.o.c.care.adapter.OptimaCareAdapter - No active profile set, falling back to 1 default profile: "default"
+2026-04-06 15:04:38 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 9090 (http)
+2026-04-06 15:04:38 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-04-06 15:04:38 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.53]
+2026-04-06 15:04:38 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-04-06 15:04:38 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1568 ms
+2026-04-06 15:04:39 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 9090 (http) with context path '/'
+2026-04-06 15:04:39 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 9091 (http)
+2026-04-06 15:04:39 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-04-06 15:04:39 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.53]
+2026-04-06 15:04:39 [main] INFO  o.a.c.c.C.[Tomcat-1].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-04-06 15:04:39 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 118 ms
+2026-04-06 15:04:39 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 3 endpoints beneath base path '/actuator'
+2026-04-06 15:04:39 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 9091 (http) with context path '/'
+2026-04-06 15:04:39 [main] INFO  o.a.c.i.engine.AbstractCamelContext - Apache Camel 4.18.0 (camel-1) is starting
+2026-04-06 15:04:39 [main] INFO  o.a.c.i.engine.AbstractCamelContext - Routes startup (total:1)
+2026-04-06 15:04:39 [main] INFO  o.a.c.i.engine.AbstractCamelContext -     Started startup (timer://startup)
+2026-04-06 15:04:39 [main] INFO  o.a.c.i.engine.AbstractCamelContext - Apache Camel 4.18.0 (camel-1) started in 15ms (build:0ms init:0ms start:15ms boot:1s419ms)
+2026-04-06 15:04:39 [main] INFO  c.o.c.care.adapter.OptimaCareAdapter - Started OptimaCareAdapter in 3.903 seconds (process running for 4.267)
+2026-04-06 15:04:39 [main] INFO  c.o.c.care.adapter.OptimaCareAdapter - Optima CMS adapter application has started...
+2026-04-06 15:04:40 [Camel (camel-1) thread #1 - timer://startup] INFO  startup - startup Camel route has begun
+2026-04-06 15:05:40 [Camel (camel-1) thread #1 - timer://startup] INFO  startup - startup Camel route has begun
+2026-04-06 15:05:48 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-04-06 15:05:48 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-04-06 15:05:48 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-04-06 15:05:48 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-04-06 15:05:48 [SpringApplicationShutdownHook] INFO  o.a.c.i.engine.AbstractCamelContext - Apache Camel 4.18.0 (camel-1) is shutting down (timeout:45s)
+2026-04-06 15:05:48 [SpringApplicationShutdownHook] INFO  o.a.c.i.engine.AbstractCamelContext - Routes stopped (total:1)
+2026-04-06 15:05:48 [SpringApplicationShutdownHook] INFO  o.a.c.i.engine.AbstractCamelContext -     Stopped startup (timer://startup)
+2026-04-06 15:05:48 [SpringApplicationShutdownHook] INFO  o.a.c.i.engine.AbstractCamelContext - Apache Camel 4.18.0 (camel-1) shutdown in 8ms (uptime:1m8s)

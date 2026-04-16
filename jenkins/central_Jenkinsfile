@@ -1,0 +1,54 @@
+@Library('Jenkins-Core-Central-Shared-Libraries') _
+
+def vertical_domain      =   "selfservice"
+def ms_app_family        =   "selfservice"
+def ms_name              =   "cms-adapter"
+def mavenCredentials     =   "nexus-optima-ui_applications"
+def REPO_PORT            =   "8359"
+
+J_IMAGE_TAG              =   ""
+def mavenMirrorURL       =   "https://nexus-optima.corp.amdocs.com/repository/mvn-optima-core-group/" 
+def nexusBaseURL         =   'https://nexus-optima.corp.amdocs.com/repository/'                         
+def nexusRepoNAME        =   "mvn_snapshots_inventory_management"                                              
+def mavenDistributionURL =   nexusBaseURL + nexusRepoNAME
+
+def ms_groupId           =   "com.amdocs.ocs"
+def ms_artifactId        =   "selfservice-cms-care-adapter"
+
+def git_branch           =   env.BRANCH_NAME
+def gitSSHRepo           =   "git@gitopt.corp.amdocs.com:optima-core/ui-apps/cms-care-adapter.git"
+def gitSSHCreds          =   'nbubuilder3_SSH_gitlab_gitopt'
+def gitURL               =   "https://gitopt.corp.amdocs.com/optima-core/ui-apps/cms-care-adapter.git"
+def gitCheckoutBranch    =   "${git_branch}"
+def scmVars
+def gitCommitID
+
+def printPre             =   "05.01.331."
+def automation_testing_trigger = "no"
+
+def allowNexusUpload     =   false
+def masterBranch         =   false
+def AWS_Upg              =   false
+def newman               =   false
+
+SpringBootPipelineTemplate(
+    vertical_domain: "${vertical_domain}",
+    ms_app_family: "${ms_app_family}",
+    ms_name: "${ms_name}",
+    mavenCredentials: "${mavenCredentials}",
+    REPO_PORT: "${REPO_PORT}",
+    mavenMirrorURL: "${mavenMirrorURL}",
+    nexusBaseURL: "${nexusBaseURL}",
+    nexusRepoNAME: "${nexusRepoNAME}",
+    mavenDistributionURL: "${mavenDistributionURL}",
+    ms_groupId: "${ms_groupId}",
+    ms_artifactId: "${ms_artifactId}",
+    gitSSHRepo: "${gitSSHRepo}",
+    gitSSHCreds: "${gitSSHCreds}",
+    gitURL: "${gitURL}",
+    gitCheckoutBranch: "${gitCheckoutBranch}",
+    automation_testing_trigger: "${automation_testing_trigger}",
+    runSonarqube: false
+)
+
+return
