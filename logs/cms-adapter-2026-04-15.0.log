@@ -5,7 +5,7 @@
 2026-04-15 15:19:41 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.53]
 2026-04-15 15:19:41 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
 2026-04-15 15:19:41 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3933 ms
-2026-04-15 15:19:42 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'catalogService' defined in file [C:\optima-cms-adapter\target\classes\com\optima\cms\service\CatalogService.class]: Unsatisfied dependency expressed through constructor parameter 0: No qualifying bean of type 'com.optima.cms.adapter.CatalogAdapter' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2026-04-15 15:19:42 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'catalogService' defined in file [C:\optima-cms-adapter\target\classes\com\optima\cms\service\CatalogService.class]: Unsatisfied dependency expressed through constructor parameter 0: No qualifying bean of type 'com.optima.cms.adapter.MagnoliaAdapter' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
 2026-04-15 15:19:42 [main] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
 2026-04-15 15:19:42 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
 
@@ -18,12 +18,12 @@ APPLICATION FAILED TO START
 
 Description:
 
-Parameter 0 of constructor in com.optima.cms.service.CatalogService required a bean of type 'com.optima.cms.adapter.CatalogAdapter' that could not be found.
+Parameter 0 of constructor in com.optima.cms.service.MagnoliaService required a bean of type 'com.optima.cms.adapter.MagnoliaAdapter' that could not be found.
 
 
 Action:
 
-Consider defining a bean of type 'com.optima.cms.adapter.CatalogAdapter' in your configuration.
+Consider defining a bean of type 'com.optima.cms.adapter.MagnoliaAdapter' in your configuration.
 
 2026-04-15 15:20:22 [main] INFO  com.optima.cms.OptimaAdapter - Starting OptimaAdapter using Java 21 with PID 41656 (C:\optima-cms-adapter\target\classes started by marinl in C:\optima-cms-adapter)
 2026-04-15 15:20:22 [main] INFO  com.optima.cms.OptimaAdapter - No active profile set, falling back to 1 default profile: "default"
@@ -32,7 +32,7 @@ Consider defining a bean of type 'com.optima.cms.adapter.CatalogAdapter' in your
 2026-04-15 15:20:24 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.53]
 2026-04-15 15:20:24 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
 2026-04-15 15:20:24 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1675 ms
-2026-04-15 15:20:24 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'restEntrypoint': Unsatisfied dependency expressed through field 'catalogService': Error creating bean with name 'catalogService' defined in file [C:\optima-cms-adapter\target\classes\com\optima\cms\service\CatalogService.class]: Unsatisfied dependency expressed through constructor parameter 0: No qualifying bean of type 'com.optima.cms.adapter.CatalogAdapter' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2026-04-15 15:20:24 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'restEntrypoint': Unsatisfied dependency expressed through field 'catalogService': Error creating bean with name 'catalogService' defined in file [C:\optima-cms-adapter\target\classes\com\optima\cms\service\CatalogService.class]: Unsatisfied dependency expressed through constructor parameter 0: No qualifying bean of type 'com.optima.cms.adapter.MagnoliaAdapter' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
 2026-04-15 15:20:24 [main] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
 2026-04-15 15:20:24 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
 
@@ -45,7 +45,7 @@ APPLICATION FAILED TO START
 
 Description:
 
-Parameter 0 of constructor in com.optima.cms.service.CatalogService required a bean of type 'com.optima.cms.adapter.CatalogAdapter' that could not be found.
+Parameter 0 of constructor in com.optima.cms.service.MagnoliaService required a bean of type 'com.optima.cms.adapter.MagnoliaAdapter' that could not be found.
 
 The injection point has the following annotations:
 	- @org.springframework.beans.factory.annotation.Autowired(required=true)
@@ -53,7 +53,7 @@ The injection point has the following annotations:
 
 Action:
 
-Consider defining a bean of type 'com.optima.cms.adapter.CatalogAdapter' in your configuration.
+Consider defining a bean of type 'com.optima.cms.adapter.MagnoliaAdapter' in your configuration.
 
 2026-04-15 15:22:35 [main] INFO  com.optima.cms.OptimaAdapter - Starting OptimaAdapter using Java 21 with PID 23664 (C:\optima-cms-adapter\target\classes started by marinl in C:\optima-cms-adapter)
 2026-04-15 15:22:35 [main] INFO  com.optima.cms.OptimaAdapter - No active profile set, falling back to 1 default profile: "default"
@@ -143,7 +143,7 @@ APPLICATION FAILED TO START
 
 Description:
 
-Parameter 0 of constructor in com.optima.cms.adapter.magnolia.MagnoliaApiClient required a bean of type 'org.springframework.web.reactive.function.client.WebClient' that could not be found.
+Parameter 0 of constructor in com.optima.cms.adapter.magnolia.MagnoliaClient required a bean of type 'org.springframework.web.reactive.function.client.WebClient' that could not be found.
 
 
 Action:
@@ -203,7 +203,7 @@ APPLICATION FAILED TO START
 
 Description:
 
-Parameter 0 of constructor in com.optima.cms.adapter.magnolia.MagnoliaApiClient required a bean of type 'org.springframework.web.reactive.function.client.WebClient' that could not be found.
+Parameter 0 of constructor in com.optima.cms.adapter.magnolia.MagnoliaClient required a bean of type 'org.springframework.web.reactive.function.client.WebClient' that could not be found.
 
 
 Action:
@@ -235,10 +235,10 @@ Consider defining a bean of type 'org.springframework.web.reactive.function.clie
 2026-04-15 16:51:36 [http-nio-9090-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
 2026-04-15 16:51:36 [http-nio-9090-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
 2026-04-15 16:51:36 [http-nio-9090-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 3 ms
-2026-04-15 16:52:09 [http-nio-9090-exec-3] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.NullPointerException: Cannot invoke "com.optima.cms.adapter.magnolia.MagnoliaApiClient.testCall()" because "this.magnoliaApiClient" is null] with root cause
-java.lang.NullPointerException: Cannot invoke "com.optima.cms.adapter.magnolia.MagnoliaApiClient.testCall()" because "this.magnoliaApiClient" is null
-	at com.optima.cms.adapter.magnolia.MagnoliaCatalogAdapter.testCall(MagnoliaCatalogAdapter.java:25)
-	at com.optima.cms.service.CatalogService.test(CatalogService.java:24)
+2026-04-15 16:52:09 [http-nio-9090-exec-3] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.NullPointerException: Cannot invoke "com.optima.cms.adapter.magnolia.MagnoliaClient.testCall()" because "this.magnoliaApiClient" is null] with root cause
+java.lang.NullPointerException: Cannot invoke "com.optima.cms.adapter.magnolia.MagnoliaClient.testCall()" because "this.magnoliaApiClient" is null
+	at com.optima.cms.adapter.magnolia.MagnoliaDispatcher.testCall(MagnoliaCatalogAdapter.java:25)
+	at com.optima.cms.service.MagnoliaService.test(CatalogService.java:24)
 	at com.optima.cms.controller.RestEntrypoint.test(RestEntrypoint.java:92)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
@@ -370,10 +370,10 @@ java.lang.NullPointerException: Cannot invoke "com.optima.cms.adapter.magnolia.M
 2026-04-15 16:52:17 [Camel (camel-1) thread #1 - timer://startup] INFO  startup - Camel route startup has begun
 2026-04-15 16:53:17 [Camel (camel-1) thread #1 - timer://startup] INFO  startup - Camel route startup has begun
 2026-04-15 16:54:17 [Camel (camel-1) thread #1 - timer://startup] INFO  startup - Camel route startup has begun
-2026-04-15 16:54:33 [http-nio-9090-exec-5] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.NullPointerException: Cannot invoke "com.optima.cms.adapter.magnolia.MagnoliaApiClient.testCall()" because "this.magnoliaApiClient" is null] with root cause
-java.lang.NullPointerException: Cannot invoke "com.optima.cms.adapter.magnolia.MagnoliaApiClient.testCall()" because "this.magnoliaApiClient" is null
-	at com.optima.cms.adapter.magnolia.MagnoliaCatalogAdapter.testCall(MagnoliaCatalogAdapter.java:25)
-	at com.optima.cms.service.CatalogService.test(CatalogService.java:24)
+2026-04-15 16:54:33 [http-nio-9090-exec-5] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.NullPointerException: Cannot invoke "com.optima.cms.adapter.magnolia.MagnoliaClient.testCall()" because "this.magnoliaApiClient" is null] with root cause
+java.lang.NullPointerException: Cannot invoke "com.optima.cms.adapter.magnolia.MagnoliaClient.testCall()" because "this.magnoliaApiClient" is null
+	at com.optima.cms.adapter.magnolia.MagnoliaDispatcher.testCall(MagnoliaCatalogAdapter.java:25)
+	at com.optima.cms.service.MagnoliaService.test(CatalogService.java:24)
 	at com.optima.cms.controller.RestEntrypoint.test(RestEntrypoint.java:92)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)

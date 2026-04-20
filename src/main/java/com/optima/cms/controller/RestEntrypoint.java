@@ -2,8 +2,11 @@ package com.optima.cms.controller;
 
 import java.util.List;
 
-import com.optima.cms.model.*;
-import com.optima.cms.service.CatalogService;
+import com.optima.cms.model.DocsEnvelope;
+import com.optima.cms.model.device.Device;
+import com.optima.cms.model.plan.*;
+import com.optima.cms.service.DeviceCatalogService;
+import com.optima.cms.service.PlanCatalogService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -13,7 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import lombok.extern.slf4j.Slf4j;
 
-import static com.optima.cms.model.Allowance.createAllowance;
+import static com.optima.cms.model.plan.Allowance.createAllowance;
 
 @RestController
 @RequestMapping("/rest/api")
@@ -21,7 +24,10 @@ import static com.optima.cms.model.Allowance.createAllowance;
 public class RestEntrypoint {
 
 	@Autowired
-	CatalogService catalogService;
+	PlanCatalogService planCatalogService;
+
+	@Autowired
+	DeviceCatalogService deviceCatalogService;
 
 	//	@GetMapping("/ping")
 //	public Map<String, String> ping() {
@@ -36,10 +42,20 @@ public class RestEntrypoint {
 
 	/**
 	 * Stub for {@code POST /rest/api/plan/findall} (selfservice plan catalog).
+	 * Response shape: {@code { "docs": [ ... ] }} to align with Magnolia / consumer contracts.
 	 */
 	@PostMapping("/plan/findall")
-	public List<Plan> findAll(@RequestBody PlanFindAllRequest request) {
-		return catalogService.getPlans(request);
+	public DocsEnvelope<Plan> findAll(@RequestBody FindAllRequest request) {
+		return DocsEnvelope.of(planCatalogService.listPlans(request));
+	}
+
+	/**
+	 * Stub for {@code POST /rest/api/device/findall} (selfservice device catalog).
+	 * Response shape: {@code { "docs": [ ... ] }}.
+	 */
+	@PostMapping("/device/findall")
+	public DocsEnvelope<Device> findAllDevices(@RequestBody FindAllRequest request) {
+		return DocsEnvelope.of(deviceCatalogService.listDevices(request));
 	}
 
 	private static Plan stubUnlimitedPlan() {
@@ -60,7 +76,6 @@ public class RestEntrypoint {
 		attachment.setName("Premium extras");
 		attachment.setAttachmentType("text");
 		attachment.setContent("<ul><li>Free streaming subscription for 3 months</li><li>Priority customer support 24/7</li><li>Unlimited hotspot tethering</li></ul>");
-		attachment.setValidFor(new ValidFor());
 		attachment.setExtension(List.of(ext));
 
 		plan.setAttachment(List.of(attachment));
@@ -89,7 +104,7 @@ public class RestEntrypoint {
 
 	@GetMapping("/test")
 	public Plan test() {
-		return catalogService.test();
+		return planCatalogService.getFirstPlanForDemo();
 	}
 }
 
