@@ -1,0 +1,537 @@
+{
+  "docs": [
+    {
+      "createdAt": "2026-04-16T20:10:30.527Z",
+      "updatedAt": "2026-04-17T10:37:07.037Z",
+      "name": "Telia",
+      "active": true,
+      "palette": {
+        "fontRole": "Telia Sans",
+        "brand": {
+          "primary": {
+            "main": "#29003E",
+            "light": "#FFFFFF"
+          },
+          "secondary": {
+            "main": "#990AE3",
+            "light": "#F4E0FF",
+            "dark": "#4E0174"
+          }
+        },
+        "neutral": {
+          "common": {
+            "black": "#222222",
+            "white": "#FFFFFF",
+            "light": "#F3F3F8"
+          },
+          "gray": {
+            "50": "#F5F5FA",
+            "100": "#E5E5EB",
+            "200": "#C6C6CD",
+            "300": "#AAAAAA",
+            "400": "#8D8D94",
+            "500": "#757579",
+            "600": "#5F5F63",
+            "700": "#4A4A4D",
+            "800": "#353537",
+            "900": "#202022"
+          }
+        },
+        "feedback": {
+          "blue": {
+            "main": "#1F66B2",
+            "light": "#8FB2D9",
+            "dark": "#103359"
+          },
+          "green": {
+            "main": "#1C7A53",
+            "light": "#8DBCA9",
+            "dark": "#0E3D2A"
+          },
+          "red": {
+            "main": "#C3352B",
+            "light": "#E19A95",
+            "dark": "#621B16"
+          },
+          "yellow": {
+            "main": "#EBA605",
+            "light": "#F5D382",
+            "dark": "#765303"
+          }
+        }
+      },
+      "footer": {
+        "companyUrl": "https://www.telia.com",
+        "copyRightText": "© Telia Company. All rights reserved.",
+        "links": [
+          {
+            "title": "About Telia",
+            "url": "https://www.telia.com/about",
+            "id": "69e1f039440896b623c508c6"
+          },
+          {
+            "title": "Personal",
+            "url": "https://www.telia.com/private",
+            "id": "69e1f039440896b623c508c7"
+          },
+          {
+            "title": "Business",
+            "url": "https://www.telia.com/business",
+            "id": "69e1f039440896b623c508c8"
+          },
+          {
+            "title": "My account",
+            "url": "https://www.telia.com/my-account",
+            "id": "69e1f039440896b623c508c9"
+          },
+          {
+            "title": "Privacy Policy",
+            "url": "https://www.telia.com/privacy",
+            "id": "69e1f039440896b623c508ca"
+          },
+          {
+            "title": "Accessibility",
+            "url": "https://www.telia.com/accessibility",
+            "id": "69e1f039440896b623c508cb"
+          },
+          {
+            "title": "Cookies",
+            "url": "https://www.telia.com/cookies",
+            "id": "69e1f039440896b623c508cc"
+          }
+        ],
+        "socialLinks": [
+          {
+            "iconName": "x",
+            "url": "https://x.com/TeliaSverige",
+            "id": "69e1f039440896b623c508cd"
+          },
+          {
+            "iconName": "facebook",
+            "url": "https://facebook.com/telia",
+            "id": "69e1f039440896b623c508ce"
+          },
+          {
+            "iconName": "linkedin",
+            "url": "https://linkedin.com/company/telia-company",
+            "id": "69e1f039440896b623c508cf"
+          },
+          {
+            "iconName": "youtube",
+            "url": "https://youtube.com/telia",
+            "id": "69e1f039440896b623c508d0"
+          },
+          {
+            "iconName": "instagram",
+            "url": "https://instagram.com/telia",
+            "id": "69e1f039440896b623c508d1"
+          }
+        ]
+      },
+      "footerBackground": {
+        "mode": "color",
+        "colorToken": {
+          "token": "brand.primary.main",
+          "resolved": ""
+        }
+      },
+      "footerText": {
+        "token": "neutral.common.white",
+        "resolved": ""
+      },
+      "header": {
+        "menuCard": {
+          "description": "Enjoy unlimited 5G wherever you go with Telia.",
+          "buttonText": "Discover",
+          "buttonUrl": "/discover"
+        },
+        "navTabs": [
+          {
+            "tab": "support",
+            "items": [
+              {
+                "mainItem": "Guided Assistant",
+                "childitems": [
+                  {
+                    "title": "Assistance Guidance (ChatAgent)",
+                    "redirectUrl": "https://www.telia.fi/kirjaudu/",
+                    "extension": [],
+                    "id": "69e608ad6c24f69b754b2aba"
+                  },
+                  {
+                    "title": "Switch Assist Tool",
+                    "redirectUrl": "https://www.telia.fi/kirjaudu/",
+                    "extension": [],
+                    "id": "69e608ad6c24f69b754b2abb"
+                  },
+                  {
+                    "title": "Call Us",
+                    "redirectUrl": "https://www.telia.fi/kirjaudu/",
+                    "extension": [],
+                    "id": "69e608ad6c24f69b754b2abc"
+                  }
+                ],
+                "extension": [],
+                "id": "69e608ad6c24f69b754b2abd"
+              },
+              {
+                "mainItem": "Report A Problem",
+                "childitems": [
+                  {
+                    "title": "General",
+                    "redirectUrl": "https://www.telia.fi/kirjaudu/",
+                    "extension": [],
+                    "id": "69e608ad6c24f69b754b2abe"
+                  },
+                  {
+                    "title": "Billing",
+                    "redirectUrl": "https://www.telia.fi/kirjaudu/",
+                    "extension": [],
+                    "id": "69e608ad6c24f69b754b2abf"
+                  },
+                  {
+                    "title": "Service Quality",
+                    "redirectUrl": "https://www.telia.fi/kirjaudu/",
+                    "extension": [],
+                    "id": "69e608ad6c24f69b754b2ac0"
+                  },
+                  {
+                    "title": "Service Coverage",
+                    "redirectUrl": "https://www.telia.fi/kirjaudu/",
+                    "extension": [],
+                    "id": "69e608ad6c24f69b754b2ac1"
+                  },
+                  {
+                    "title": "Usage",
+                    "redirectUrl": "https://www.telia.fi/kirjaudu/",
+                    "extension": [],
+                    "id": "69e608ad6c24f69b754b2ac2"
+                  }
+                ],
+                "extension": [],
+                "id": "69e608ad6c24f69b754b2ac3"
+              },
+              {
+                "mainItem": "FAQ",
+                "childitems": [
+                  {
+                    "title": "About Us",
+                    "redirectUrl": "https://www.telia.fi/english/telia-as-a-company",
+                    "extension": [],
+                    "id": "69e608ad6c24f69b754b2ac4"
+                  },
+                  {
+                    "title": "Store Locator",
+                    "redirectUrl": "https://www.telia.fi/english/telia-as-a-company",
+                    "extension": [],
+                    "id": "69e608ad6c24f69b754b2ac5"
+                  },
+                  {
+                    "title": "Coverage Map",
+                    "redirectUrl": "https://www.telia.fi/english/telia-as-a-company",
+                    "extension": [],
+                    "id": "69e608ad6c24f69b754b2ac6"
+                  },
+                  {
+                    "title": "Shipping Partners",
+                    "redirectUrl": "https://www.telia.fi/english/telia-as-a-company",
+                    "extension": [],
+                    "id": "69e608ad6c24f69b754b2ac7"
+                  }
+                ],
+                "extension": [],
+                "id": "69e608ad6c24f69b754b2ac8"
+              }
+            ],
+            "extension": [
+              {
+                "key": "content",
+                "value": "<div style=\"display: flex\">   <div     style=\"       width: 360px; /* or 270px for mobile */       height: 280px; /* or 150px for mobile */       background-image: url(&quot;https://selfservice-staging.amdocsdigitalbss.cloud/api/media/file/Header%20Plan%20Promotion.png&quot;);       background-size: cover;       background-position: center;       position: relative;       border-radius: 12px;     \"   ></div>   <div     style=\"       display: flex;       flex-direction: column;       position: absolute;       gap: 5rem; /* or 2rem for mobile */       padding-left: 1rem;       padding-right: 1rem;       width: 360px; /* or 270px for mobile */     \"   >     <span       style=\"         color: darkblue;         line-height: 1; /* adjust for desktop/mobile */         margin-top: 1.5rem; /* or 1rem for mobile */         width: 80%;         font-weight: bold;         font-size: 1.5rem; /* adjust for desktop/mobile */       \"     >       Balance talking and screen time effortlessly!     </span>     <button       style=\"         width: fit-content;         padding: 16px 24px;         border: 2px solid darkblue;         border-radius: 50px;         color: #fff;         font-size: 16px;       \"       onclick=\"window.location.replace('/')\"     >       Discover     </button>   </div> </div>",
+                "id": "69e608ad6c24f69b754b2ac9"
+              }
+            ],
+            "id": "69e608ad6c24f69b754b2aca"
+          },
+          {
+            "tab": "my-account",
+            "items": [
+              {
+                "mainItem": "Balance & Usage",
+                "childitems": [
+                  {
+                    "title": "Plan Usage",
+                    "redirectUrl": "https://www.telia.fi/kirjaudu?redirect=https://www.telia.fi/matkalla",
+                    "extension": [],
+                    "id": "69e608ad6c24f69b754b2acb"
+                  },
+                  {
+                    "title": "My Data Usage",
+                    "redirectUrl": "https://www.telia.fi/kirjaudu?redirect=https://www.telia.fi/matkalla",
+                    "extension": [],
+                    "id": "69e608ad6c24f69b754b2acc"
+                  },
+                  {
+                    "title": "My bills and payment",
+                    "redirectUrl": "https://www.telia.fi/kirjaudu?redirect=https://www.telia.fi/matkalla",
+                    "extension": [],
+                    "id": "69e608ad6c24f69b754b2acd"
+                  },
+                  {
+                    "title": "Billing History",
+                    "redirectUrl": "https://www.telia.fi/kirjaudu?redirect=https://www.telia.fi/matkalla",
+                    "extension": [],
+                    "id": "69e608ad6c24f69b754b2ace"
+                  },
+                  {
+                    "title": "Orders",
+                    "redirectUrl": "https://www.telia.fi/kirjaudu?redirect=https://www.telia.fi/matkalla",
+                    "extension": [],
+                    "id": "69e608ad6c24f69b754b2acf"
+                  }
+                ],
+                "extension": [],
+                "id": "69e608ad6c24f69b754b2ad0"
+              },
+              {
+                "mainItem": "Services",
+                "childitems": [
+                  {
+                    "title": "Change Plan",
+                    "redirectUrl": "https://www.telia.fi/kirjaudu?redirect=https://www.telia.fi/matkalla",
+                    "extension": [],
+                    "id": "69e608ad6c24f69b754b2ad1"
+                  },
+                  {
+                    "title": "Add Addons",
+                    "redirectUrl": "https://www.telia.fi/kirjaudu?redirect=https://www.telia.fi/matkalla",
+                    "extension": [],
+                    "id": "69e608ad6c24f69b754b2ad2"
+                  },
+                  {
+                    "title": "Loyalty Points",
+                    "redirectUrl": "https://www.telia.fi/kirjaudu?redirect=https://www.telia.fi/matkalla",
+                    "extension": [],
+                    "id": "69e608ad6c24f69b754b2ad3"
+                  },
+                  {
+                    "title": "Upgrade Device",
+                    "redirectUrl": "https://www.telia.fi/kirjaudu?redirect=https://www.telia.fi/matkalla",
+                    "extension": [],
+                    "id": "69e608ad6c24f69b754b2ad4"
+                  },
+                  {
+                    "title": "Payment Methods",
+                    "redirectUrl": "https://www.telia.fi/kirjaudu?redirect=https://www.telia.fi/matkalla",
+                    "extension": [],
+                    "id": "69e608ad6c24f69b754b2ad5"
+                  }
+                ],
+                "extension": [],
+                "id": "69e608ad6c24f69b754b2ad6"
+              },
+              {
+                "mainItem": "My Family",
+                "childitems": [
+                  {
+                    "title": "Family Usages",
+                    "redirectUrl": "https://www.telia.fi/kirjaudu?redirect=https://www.telia.fi/matkalla",
+                    "extension": [],
+                    "id": "69e608ad6c24f69b754b2ad7"
+                  },
+                  {
+                    "title": "Family Plan",
+                    "redirectUrl": "https://www.telia.fi/kirjaudu?redirect=https://www.telia.fi/matkalla",
+                    "extension": [],
+                    "id": "69e608ad6c24f69b754b2ad8"
+                  },
+                  {
+                    "title": "Parental controls",
+                    "redirectUrl": "https://www.telia.fi/kirjaudu?redirect=https://www.telia.fi/matkalla",
+                    "extension": [],
+                    "id": "69e608ad6c24f69b754b2ad9"
+                  },
+                  {
+                    "title": "Orders History",
+                    "redirectUrl": "https://www.telia.fi/kirjaudu?redirect=https://www.telia.fi/matkalla",
+                    "extension": [],
+                    "id": "69e608ad6c24f69b754b2ada"
+                  }
+                ],
+                "extension": [],
+                "id": "69e608ad6c24f69b754b2adb"
+              }
+            ],
+            "extension": [
+              {
+                "key": "content",
+                "value": "<div style=\"display: flex\">   <div     style=\"       width: 360px; /* or 270px for mobile */       height: 280px; /* or 150px for mobile */       background-image: url(&quot;https://selfservice-staging.amdocsdigitalbss.cloud/api/media/file/Header%20Plan%20Promotion.png&quot;);       background-size: cover;       background-position: center;       position: relative;       border-radius: 12px;     \"   ></div>   <div     style=\"       display: flex;       flex-direction: column;       position: absolute;       gap: 5rem; /* or 2rem for mobile */       padding-left: 1rem;       padding-right: 1rem;       width: 360px; /* or 270px for mobile */     \"   >     <span       style=\"         color: darkblue;         line-height: 1; /* adjust for desktop/mobile */         margin-top: 1.5rem; /* or 1rem for mobile */         width: 80%;         font-weight: bold;         font-size: 1.5rem; /* adjust for desktop/mobile */       \"     >       Balance talking and screen time effortlessly!     </span>     <button       style=\"         width: fit-content;         padding: 16px 24px;         border: 2px solid darkblue;         border-radius: 50px;         color: #fff;         font-size: 16px;       \"       onclick=\"window.location.replace('/')\"     >       Discover     </button>   </div> </div>",
+                "id": "69e608ad6c24f69b754b2adc"
+              }
+            ],
+            "id": "69e608ad6c24f69b754b2add"
+          },
+          {
+            "tab": "shop",
+            "items": [
+              {
+                "mainItem": "Tariffs",
+                "childitems": [
+                  {
+                    "title": "eSIM Card",
+                    "redirectUrl": "https://www.telia.fi/kauppa/liittymat/e-sim",
+                    "extension": [],
+                    "id": "69e608ad6c24f69b754b2ade"
+                  },
+                  {
+                    "title": "Prepaid",
+                    "redirectUrl": "https://www.telia.fi/kauppa/liittymat/prepaid",
+                    "extension": [],
+                    "id": "69e608ad6c24f69b754b2adf"
+                  },
+                  {
+                    "title": "Postpaid",
+                    "redirectUrl": "https://www.telia.com/shop/tariffs/postpaid",
+                    "extension": [],
+                    "id": "69e608ad6c24f69b754b2ae0"
+                  },
+                  {
+                    "title": "Premium",
+                    "redirectUrl": "https://www.telia.com/shop/tariffs/premium",
+                    "extension": [],
+                    "id": "69e608ad6c24f69b754b2ae1"
+                  },
+                  {
+                    "title": "Switch Assist",
+                    "redirectUrl": "https://www.telia.com/shop/tariffs/switch-assist",
+                    "extension": [],
+                    "id": "69e608ad6c24f69b754b2ae2"
+                  }
+                ],
+                "extension": [],
+                "id": "69e608ad6c24f69b754b2ae3"
+              },
+              {
+                "mainItem": "Services",
+                "childitems": [
+                  {
+                    "title": "Payment And Balance",
+                    "redirectUrl": "https://www.telia.fi/kirjaudu?redirect=https://www.telia.fi/OmatSivut/messagingCenter.do",
+                    "extension": [],
+                    "id": "69e608ad6c24f69b754b2ae4"
+                  },
+                  {
+                    "title": "Call management",
+                    "redirectUrl": "https://www.telia.fi/kirjaudu?redirect=https://www.telia.fi/OmatSivut/messagingCenter.do",
+                    "extension": [],
+                    "id": "69e608ad6c24f69b754b2ae5"
+                  },
+                  {
+                    "title": "Messages",
+                    "redirectUrl": "https://www.telia.fi/kirjaudu?redirect=https://www.telia.fi/OmatSivut/messagingCenter.do",
+                    "extension": [],
+                    "id": "69e608ad6c24f69b754b2ae6"
+                  }
+                ],
+                "extension": [],
+                "id": "69e608ad6c24f69b754b2ae7"
+              },
+              {
+                "mainItem": "Internet",
+                "childitems": [
+                  {
+                    "title": "Unlimited",
+                    "redirectUrl": "https://kauppa.telia.fi/yksityisille/tuotteet/mobiililaajakaista.aspx",
+                    "extension": [],
+                    "id": "69e608ad6c24f69b754b2ae8"
+                  },
+                  {
+                    "title": "Monthly",
+                    "redirectUrl": "https://kauppa.telia.fi/yksityisille/tuotteet/mobiililaajakaista.aspx",
+                    "extension": [],
+                    "id": "69e608ad6c24f69b754b2ae9"
+                  },
+                  {
+                    "title": "Daily",
+                    "redirectUrl": "https://kauppa.telia.fi/yksityisille/tuotteet/mobiililaajakaista.aspx",
+                    "extension": [],
+                    "id": "69e608ad6c24f69b754b2aea"
+                  }
+                ],
+                "extension": [],
+                "id": "69e608ad6c24f69b754b2aeb"
+              },
+              {
+                "mainItem": "Roaming",
+                "childitems": [
+                  {
+                    "title": "Countries and prices",
+                    "redirectUrl": "https://www.telia.fi/matkalla",
+                    "extension": [],
+                    "id": "69e608ad6c24f69b754b2aec"
+                  },
+                  {
+                    "title": "Roaming internet packs",
+                    "redirectUrl": "https://www.telia.fi/matkalla",
+                    "extension": [],
+                    "id": "69e608ad6c24f69b754b2aed"
+                  },
+                  {
+                    "title": "*Tourist* tariffs",
+                    "redirectUrl": "https://www.telia.fi/matkalla",
+                    "extension": [],
+                    "id": "69e608ad6c24f69b754b2aee"
+                  }
+                ],
+                "extension": [],
+                "id": "69e608ad6c24f69b754b2aef"
+              }
+            ],
+            "extension": [
+              {
+                "key": "content",
+                "value": "<div style=\"display: flex\">   <div     style=\"       width: 360px; /* or 270px for mobile */       height: 280px; /* or 150px for mobile */       background-image: url(&quot;https://selfservice-staging.amdocsdigitalbss.cloud/api/media/file/Header%20Plan%20Promotion.png&quot;);       background-size: cover;       background-position: center;       position: relative;       border-radius: 12px;     \"   ></div>   <div     style=\"       display: flex;       flex-direction: column;       position: absolute;       gap: 5rem; /* or 2rem for mobile */       padding-left: 1rem;       padding-right: 1rem;       width: 360px; /* or 270px for mobile */     \"   >     <span       style=\"         color: darkblue;         line-height: 1; /* adjust for desktop/mobile */         margin-top: 1.5rem; /* or 1rem for mobile */         width: 80%;         font-weight: bold;         font-size: 1.5rem; /* adjust for desktop/mobile */       \"     >       Balance talking and screen time effortlessly!     </span>     <button       style=\"         width: fit-content;         padding: 16px 24px;         border: 2px solid darkblue;         border-radius: 50px;         color: #fff;         font-size: 16px;       \"       onclick=\"window.location.replace('/')\"     >       Discover     </button>   </div> </div>",
+                "id": "69e608ad6c24f69b754b2af0"
+              }
+            ],
+            "id": "69e608ad6c24f69b754b2af1"
+          }
+        ]
+      },
+      "headerBackground": {
+        "mode": "color",
+        "colorToken": {
+          "token": "brand.primary.main",
+          "resolved": ""
+        }
+      },
+      "headerText": {
+        "token": "neutral.common.white",
+        "resolved": ""
+      },
+      "logo": {
+        "createdAt": "2026-04-17T10:37:05.279Z",
+        "updatedAt": "2026-04-17T10:37:05.279Z",
+        "filename": "TELIA.ST.D-53985723-3dfa2ecd-4eb9-4837-868b-8036425512d1.png",
+        "mimeType": "image/png",
+        "filesize": 44273,
+        "width": 974,
+        "height": 1024,
+        "focalX": 50,
+        "focalY": 50,
+        "id": "69e20d511957f96349576e65",
+        "url": "/api/media/file/TELIA.ST.D-53985723-3dfa2ecd-4eb9-4837-868b-8036425512d1.png",
+        "thumbnailURL": null
+      },
+      "id": "69e142367bebbf66072b4b7d"
+    }
+  ],
+  "totalDocs": 1,
+  "limit": 10,
+  "totalPages": 1,
+  "page": 1,
+  "pagingCounter": 1,
+  "hasPrevPage": false,
+  "hasNextPage": false,
+  "prevPage": null,
+  "nextPage": null
+}

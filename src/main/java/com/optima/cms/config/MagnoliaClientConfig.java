@@ -1,5 +1,6 @@
 package com.optima.cms.config;
 
+import com.optima.cms.adapter.magnolia.MagnoliaRestPaths;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -24,4 +25,9 @@ public class MagnoliaClientConfig {
                 .defaultHeaders(headers -> headers.setBasicAuth(username, password))
                 .build();
     }
+
+	@Bean
+	public MagnoliaRestPaths magnoliaRestPaths() {
+		return MagnoliaRestPaths.defaults();
+	}
 }

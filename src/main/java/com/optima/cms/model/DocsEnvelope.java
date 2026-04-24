@@ -18,7 +18,18 @@ public class DocsEnvelope<T> {
 
 	private List<T> docs;
 
+	/** Optional pagination (Magnolia / Payload-style); omitted from JSON when null. */
+	private Integer totalDocs;
+	private Integer limit;
+	private Integer totalPages;
+	private Integer page;
+	private Integer pagingCounter;
+	private Boolean hasPrevPage;
+	private Boolean hasNextPage;
+	private Integer prevPage;
+	private Integer nextPage;
+
 	public static <T> DocsEnvelope<T> of(List<T> docs) {
-		return new DocsEnvelope<>(docs != null ? docs : List.of());
+		return new DocsEnvelope<>(docs != null ? docs : List.of(), null, null, null, null, null, null, null, null, null);
 	}
 }

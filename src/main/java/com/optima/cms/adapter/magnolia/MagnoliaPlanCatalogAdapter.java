@@ -1,12 +1,17 @@
 package com.optima.cms.adapter.magnolia;
 
+import com.optima.cms.adapter.magnolia.dto.plan.MagnoliaPlan;
 import com.optima.cms.adapter.magnolia.plan.MagnoliaPlanTranslator;
 import com.optima.cms.model.plan.*;
 import com.optima.cms.port.PlanCatalogPort;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 
-import java.util.ArrayList;
+import java.util.LinkedHashSet;
 import java.util.List;
+import java.util.Objects;
+import java.util.Set;
+import java.util.stream.Collectors;
 
 import static com.optima.cms.model.plan.Allowance.createAllowance;
 
@@ -14,6 +19,7 @@ import static com.optima.cms.model.plan.Allowance.createAllowance;
  * Magnolia-backed implementation of {@link PlanCatalogPort}: HTTP client + translation to API models.
  */
 @Component
+@Slf4j
 public class MagnoliaPlanCatalogAdapter implements PlanCatalogPort {
 
 	private final MagnoliaClient magnoliaClient;
@@ -26,9 +32,41 @@ public class MagnoliaPlanCatalogAdapter implements PlanCatalogPort {
 
 	@Override
 	public List<Plan> listPlans(FindAllRequest request) {
-		return magnoliaClient.getPlans(request).stream()
-				.map(magnoliaPlanTranslator::adaptPlan)
+		List<MagnoliaPlan> all = magnoliaClient.getPlans(request);
+		List<MagnoliaPlan> selected = applyExternalIdFilter(all, request);
+		return selected.stream().map(magnoliaPlanTranslator::adaptPlan).toList();
+	}
+
+	/**
+	 * When the request lists {@code externalId} values, keep only Magnolia plans whose {@code externalId}
+	 * is in that set (trimmed, exact match). If that yields no rows, returns the full {@code all} list.
+	 * When {@code externalId} is null or empty, returns {@code all} unchanged.
+	 */
+	private List<MagnoliaPlan> applyExternalIdFilter(List<MagnoliaPlan> all, FindAllRequest request) {
+		if (all == null || all.isEmpty()) {
+			return List.of();
+		}
+		List<String> requestedIds = request != null ? request.getExternalId() : null;
+		if (requestedIds == null || requestedIds.isEmpty()) {
+			return all;
+		}
+		Set<String> wanted = requestedIds.stream()
+				.filter(Objects::nonNull)
+				.map(String::trim)
+				.filter(s -> !s.isEmpty())
+				.collect(Collectors.toCollection(LinkedHashSet::new));
+		if (wanted.isEmpty()) {
+			return all;
+		}
+		List<MagnoliaPlan> matched = all.stream()
+				.filter(Objects::nonNull)
+				.filter(p -> p.getExternalId() != null && wanted.contains(p.getExternalId().trim()))
 				.toList();
+		if (!matched.isEmpty()) {
+			return matched;
+		}
+		log.info("No plans matched externalId filter {}; returning full catalog ({} plans)", wanted, all.size());
+		return all;
 	}
 
 

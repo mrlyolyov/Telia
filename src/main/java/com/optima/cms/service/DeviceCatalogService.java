@@ -1,11 +1,9 @@
 package com.optima.cms.service;
 
-import com.optima.cms.model.device.Device;
+import com.fasterxml.jackson.databind.JsonNode;
 import com.optima.cms.model.plan.FindAllRequest;
 import com.optima.cms.port.DeviceCatalogPort;
 import org.springframework.stereotype.Service;
-
-import java.util.List;
 
 @Service
 public class DeviceCatalogService {
@@ -16,8 +14,8 @@ public class DeviceCatalogService {
 		this.deviceCatalogPort = deviceCatalogPort;
 	}
 
-	public List<Device> listDevices(FindAllRequest request) {
-		return deviceCatalogPort.listDevices(request);
+	public JsonNode getDeviceCatalog(FindAllRequest request) {
+		return deviceCatalogPort.getDeviceCatalog(request);
 	}
 
 }

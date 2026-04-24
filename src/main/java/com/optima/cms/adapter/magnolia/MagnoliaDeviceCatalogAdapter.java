@@ -1,131 +1,105 @@
 package com.optima.cms.adapter.magnolia;
 
-import com.optima.cms.model.device.*;
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.node.ArrayNode;
+import com.fasterxml.jackson.databind.node.ObjectNode;
 import com.optima.cms.model.plan.FindAllRequest;
 import com.optima.cms.port.DeviceCatalogPort;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.core.io.ClassPathResource;
 import org.springframework.stereotype.Component;
 
-import java.math.BigDecimal;
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.LinkedHashSet;
 import java.util.List;
+import java.util.Objects;
+import java.util.Set;
+import java.util.stream.Collectors;
 
 /**
- * Magnolia-backed implementation of {@link DeviceCatalogPort}: HTTP client + translation to API models.
- * Currently returns example catalog data matching the device contract.
+ * Magnolia-backed device catalog. Until Magnolia exposes a delivery API, serves a classpath mock
+ * ({@code mock/device-findall.json}) with the full response envelope.
  */
 @Component
+@Slf4j
 public class MagnoliaDeviceCatalogAdapter implements DeviceCatalogPort {
 
+	private static final String MOCK_RESOURCE = "mock/device-findall.json";
+
+	private final ObjectMapper objectMapper;
+	private volatile JsonNode cachedRoot;
+
+	public MagnoliaDeviceCatalogAdapter(ObjectMapper objectMapper) {
+		this.objectMapper = objectMapper;
+	}
+
 	@Override
-	public List<Device> listDevices(FindAllRequest request) {
-		return List.of(exampleIphone15Plus());
+	public JsonNode getDeviceCatalog(FindAllRequest request) {
+		JsonNode base = loadMockRoot();
+		return applyExternalIdFilter(base, request);
 	}
 
-	private static Device exampleIphone15Plus() {
-		Device device = new Device();
-		device.setExternalId("2000251652");
-		device.setName("iPhone 15 Plus");
-		device.setDescription("A16 Bionic chip. 48MP camera. USB-C.");
-
-		DeviceAttachment front = new DeviceAttachment();
-		front.setId("default-front");
-		front.setName("iPhone 15 Plus - Front");
-		front.setAttachmentType("picture");
-		front.setMimeType("image/png");
-		front.setFile("682a1f3c");
-
-		DeviceAttachment specs = new DeviceAttachment();
-		specs.setId("specs");
-		specs.setName("Specifications");
-		specs.setAttachmentType("other");
-		specs.setContent("<table>...HTML specs...</table>");
-
-		DeviceAttachment moreDetails = new DeviceAttachment();
-		moreDetails.setId("more-details");
-		moreDetails.setName("More Details");
-		moreDetails.setAttachmentType("other");
-		moreDetails.setContent("Summary text...");
-		moreDetails.setExtension(List.of(
-				kv("overview", "<div>...</div>"),
-				kv("termsAndConditions", "<div>...</div>")));
-
-		device.setAttachment(List.of(front, specs, moreDetails));
-
-		device.setPrice(List.of(
-				price(1, "oneTime", "USD", new BigDecimal("899")),
-				price(2, "recurring", "USD", new BigDecimal("37.45"))));
-
-		DeviceCharacteristics ch = new DeviceCharacteristics();
-		ch.setColor(List.of(
-				cv("Black"),
-				cv("Pink"),
-				cv("Yellow")));
-		ch.setStorage(List.of(
-				cv("128GB"),
-				cv("256GB")));
-		ch.setFeatures(List.of(
-				feature("Display", "6.7 inches"),
-				feature("Camera", "48MP + 12MP"),
-				feature("Brand", "Apple"),
-				feature("CPU", "Apple A16 Bionic"),
-				feature("Battery", "4383 mAh"),
-				feature("Band", "5G")));
-		device.setCharacteristics(ch);
-
-		DeviceVariant v1 = new DeviceVariant();
-		v1.setVariantId(2000256260L);
-		v1.setName("iPhone 15 Plus 128GB Black");
-		DeviceCharacteristics v1ch = new DeviceCharacteristics();
-		v1ch.setColor(List.of(cv("Black")));
-		v1ch.setStorage(List.of(cv("128GB")));
-		v1.setCharacteristics(v1ch);
-
-		DeviceVariant v2 = new DeviceVariant();
-		v2.setVariantId(2000256264L);
-		v2.setName("iPhone 15 Plus 128GB Pink");
-		DeviceAttachment pinkPic = new DeviceAttachment();
-		pinkPic.setId("pink-front");
-		pinkPic.setAttachmentType("picture");
-		pinkPic.setMimeType("image/png");
-		pinkPic.setFile("a92b3e7d");
-		v2.setAttachment(List.of(pinkPic));
-		DeviceCharacteristics v2ch = new DeviceCharacteristics();
-		v2ch.setColor(List.of(cv("Pink")));
-		v2ch.setStorage(List.of(cv("128GB")));
-		v2.setCharacteristics(v2ch);
-
-		device.setVariants(List.of(v1, v2));
-		return device;
+	private JsonNode loadMockRoot() {
+		JsonNode local = cachedRoot;
+		if (local != null) {
+			return local;
+		}
+		synchronized (this) {
+			if (cachedRoot != null) {
+				return cachedRoot;
+			}
+			ClassPathResource resource = new ClassPathResource(MOCK_RESOURCE);
+			try (InputStream in = resource.getInputStream()) {
+				cachedRoot = objectMapper.readTree(in);
+				return cachedRoot;
+			} catch (IOException e) {
+				throw new IllegalStateException("Failed to read classpath " + MOCK_RESOURCE, e);
+			}
+		}
 	}
 
-	private static DeviceKeyValue kv(String key, String value) {
-		DeviceKeyValue e = new DeviceKeyValue();
-		e.setKey(key);
-		e.setValue(value);
-		return e;
+	/**
+	 * When {@code externalId} is provided, keep only matching docs (trimmed, exact match on {@code externalId}).
+	 * If none match, returns the full mock. Updates {@code totalDocs} when filtering returns a non-empty subset.
+	 */
+	private JsonNode applyExternalIdFilter(JsonNode base, FindAllRequest request) {
+		if (base == null || !base.isObject()) {
+			return base;
+		}
+		JsonNode docsNode = base.get("docs");
+		if (docsNode == null || !docsNode.isArray()) {
+			return base;
+		}
+		List<String> requested = request != null ? request.getExternalId() : null;
+		if (requested == null || requested.isEmpty()) {
+			return base;
+		}
+		Set<String> wanted = requested.stream()
+				.filter(Objects::nonNull)
+				.map(String::trim)
+				.filter(s -> !s.isEmpty())
+				.collect(Collectors.toCollection(LinkedHashSet::new));
+		if (wanted.isEmpty()) {
+			return base;
+		}
+		ArrayNode filtered = objectMapper.createArrayNode();
+		for (JsonNode d : docsNode) {
+			if (d != null && d.isObject() && d.hasNonNull("externalId")) {
+				String ext = d.get("externalId").asText("").trim();
+				if (wanted.contains(ext)) {
+					filtered.add(d);
+				}
+			}
+		}
+		if (filtered.isEmpty()) {
+			log.info("No device documents matched externalId filter {}; returning full mock catalog", wanted);
+			return base;
+		}
+		ObjectNode copy = base.deepCopy();
+		copy.set("docs", filtered);
+		copy.put("totalDocs", filtered.size());
+		return copy;
 	}
-
-	private static DeviceCharacteristicValue cv(String value) {
-		DeviceCharacteristicValue e = new DeviceCharacteristicValue();
-		e.setValue(value);
-		return e;
-	}
-
-	private static DeviceFeature feature(String key, String value) {
-		DeviceFeature f = new DeviceFeature();
-		f.setKey(key);
-		f.setValue(value);
-		return f;
-	}
-
-	private static DevicePrice price(int id, String type, String currency, BigDecimal value) {
-		MoneyAmount amount = new MoneyAmount();
-		amount.setCurrency(currency);
-		amount.setValue(value);
-		DevicePrice p = new DevicePrice();
-		p.setId(id);
-		p.setType(type);
-		p.setAmount(amount);
-		return p;
-	}
-
 }

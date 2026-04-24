@@ -1,0 +1,681 @@
+{
+  "docs": [
+    {
+      "createdAt": "2026-03-17T04:39:07.193Z",
+      "updatedAt": "2026-03-17T04:39:07.193Z",
+      "externalId": "2000252201",
+      "name": "Samsung Galaxy Book3 360",
+      "description": "39.6cm FHD touchscreen with Gorilla Glass, 14mm slim profile at just 1.49kg. Convertible design with Intel CPU (4.7GHz), 16GB RAM, 512GB SSD, and Iris Xe Graphics. Enhanced by Dolby Atmos and AKG speakers with Windows 11.",
+      "attachment": [
+        {
+          "id": "gray-front",
+          "name": "Samsung Galaxy Book3 360 Gray - Front",
+          "description": "Front view - Gray",
+          "attachmentType": "picture",
+          "mimeType": "image/png",
+          "file": {
+            "createdAt": "2026-03-17T04:39:04.991Z",
+            "updatedAt": "2026-03-17T04:39:04.991Z",
+            "user": "68468068f56ee7812596f495",
+            "url": "/api/media/file/book3_gray_front.png",
+            "filename": "book3_gray_front.png",
+            "mimeType": "image/png",
+            "filesize": 7679,
+            "width": 300,
+            "height": 231,
+            "focalX": 50,
+            "focalY": 50,
+            "id": "69b8dae8ef62e7674547ed68",
+            "thumbnailURL": null
+          },
+          "validFor": {},
+          "extension": []
+        },
+        {
+          "id": "gray-1",
+          "name": "Samsung Galaxy Book3 360 Gray - Detail 1",
+          "description": "Detail 1 - Gray",
+          "attachmentType": "picture",
+          "mimeType": "image/png",
+          "file": {
+            "createdAt": "2026-03-17T04:39:05.552Z",
+            "updatedAt": "2026-03-17T04:39:05.552Z",
+            "user": "68468068f56ee7812596f495",
+            "url": "/api/media/file/book3_gray_1.png",
+            "filename": "book3_gray_1.png",
+            "mimeType": "image/png",
+            "filesize": 17580,
+            "width": 300,
+            "height": 240,
+            "focalX": 50,
+            "focalY": 50,
+            "id": "69b8dae9ef62e7674547ed6d",
+            "thumbnailURL": null
+          },
+          "validFor": {},
+          "extension": []
+        },
+        {
+          "id": "gray-2",
+          "name": "Samsung Galaxy Book3 360 Gray - Detail 2",
+          "description": "Detail 2 - Gray",
+          "attachmentType": "picture",
+          "mimeType": "image/png",
+          "file": {
+            "createdAt": "2026-03-17T04:39:06.162Z",
+            "updatedAt": "2026-03-17T04:39:06.162Z",
+            "user": "68468068f56ee7812596f495",
+            "url": "/api/media/file/book3_gray_2.png",
+            "filename": "book3_gray_2.png",
+            "mimeType": "image/png",
+            "filesize": 40356,
+            "width": 300,
+            "height": 240,
+            "focalX": 50,
+            "focalY": 50,
+            "id": "69b8daeaef62e7674547ed72",
+            "thumbnailURL": null
+          },
+          "validFor": {},
+          "extension": []
+        },
+        {
+          "id": "specs-parent",
+          "name": "Specifications",
+          "description": "Device technical specifications",
+          "attachmentType": "other",
+          "content": "<table style=\"width:100%;border-collapse:collapse;\"><tr><td>Display</td><td>13.3-inch FHD AMOLED Touchscreen</td></tr></table>",
+          "validFor": {},
+          "extension": []
+        },
+        {
+          "id": "what-in-box-parent",
+          "name": "What's in the box",
+          "description": "Package contents",
+          "attachmentType": "other",
+          "content": "<ul><li>Samsung Galaxy Book3 360</li><li>65W USB-C Power Adapter</li></ul>",
+          "validFor": {},
+          "extension": []
+        },
+        {
+          "id": "more-details-parent",
+          "name": "More Details",
+          "description": "Detailed content for Overview and Terms tabs",
+          "attachmentType": "other",
+          "content": "Samsung Galaxy Book3 360 combines premium design with powerful performance in a versatile 2-in-1 form factor.",
+          "validFor": {},
+          "extension": [
+            {
+              "key": "overview",
+              "value": "<div><h3>Work and play, any way you want</h3><p>The Galaxy Book3 360 is a versatile 2-in-1 laptop.</p></div>",
+              "id": "69b8daeb2881c70001d90970"
+            },
+            {
+              "key": "termsAndConditions",
+              "value": "<div><h3>Terms &amp; Conditions</h3><ul><li>Standard manufacturer warranty of 1 year applies.</li></ul></div>",
+              "id": "69b8daeb2881c70001d90971"
+            }
+          ]
+        }
+      ],
+      "characteristics": {
+        "color": [
+          {
+            "value": "Gray",
+            "id": "69b8daeb2881c70001d90972"
+          }
+        ],
+        "storage": [
+          {
+            "value": "1TB SSD",
+            "id": "69b8daeb2881c70001d90973"
+          },
+          {
+            "value": "2TB SSD",
+            "id": "69b8daeb2881c70001d90974"
+          },
+          {
+            "value": "4TB SSD",
+            "id": "69b8daeb2881c70001d90975"
+          }
+        ],
+        "features": [
+          {
+            "key": "Display",
+            "Value": "13.3 inches",
+            "id": "69b8daeb2881c70001d90976"
+          },
+          {
+            "key": "Display Resolution",
+            "Value": "1920 x 1080 pixels",
+            "id": "69b8daeb2881c70001d90977"
+          },
+          {
+            "key": "Brand",
+            "Value": "Samsung",
+            "id": "69b8daeb2881c70001d90978"
+          },
+          {
+            "key": "CPU",
+            "Value": "Intel Core i7",
+            "id": "69b8daeb2881c70001d90979"
+          },
+          {
+            "key": "OS",
+            "Value": "Windows 11",
+            "id": "69b8daeb2881c70001d9097a"
+          },
+          {
+            "key": "Battery",
+            "Value": "68Wh",
+            "id": "69b8daeb2881c70001d9097b"
+          },
+          {
+            "key": "RAM",
+            "Value": "16GB DDR4 SDRAM",
+            "id": "69b8daeb2881c70001d9097c"
+          },
+          {
+            "key": "Weight",
+            "Value": "1.16 kg",
+            "id": "69b8daeb2881c70001d9097d"
+          },
+          {
+            "key": "Warranty",
+            "Value": "1 Year",
+            "id": "69b8daeb2881c70001d9097e"
+          }
+        ],
+        "extension": []
+      },
+      "variants": [
+        {
+          "variantId": 2000256868,
+          "name": "Samsung Galaxy Book3 360 1TB Gray",
+          "characteristics": {
+            "color": [],
+            "storage": [],
+            "features": [],
+            "extension": []
+          },
+          "id": "69b8daeb2881c70001d9097f",
+          "attachment": [],
+          "price": [],
+          "extension": []
+        },
+        {
+          "variantId": 2000256871,
+          "name": "Samsung Galaxy Book3 360 2TB Gray",
+          "characteristics": {
+            "color": [],
+            "storage": [],
+            "features": [],
+            "extension": []
+          },
+          "id": "69b8daeb2881c70001d90980",
+          "attachment": [],
+          "price": [],
+          "extension": []
+        },
+        {
+          "variantId": 2000256870,
+          "name": "Samsung Galaxy Book3 360 4TB Gray",
+          "characteristics": {
+            "color": [],
+            "storage": [],
+            "features": [],
+            "extension": []
+          },
+          "id": "69b8daeb2881c70001d90981",
+          "attachment": [],
+          "price": [],
+          "extension": []
+        }
+      ],
+      "id": "69b8daebef62e7674547ed79",
+      "price": [],
+      "extension": []
+    },
+    {
+      "createdAt": "2026-03-17T04:38:38.782Z",
+      "updatedAt": "2026-03-17T04:38:38.782Z",
+      "externalId": "2000252203",
+      "name": "Apple 2024 MacBook Air",
+      "description": "Lightweight and just over 1 cm thin, so you can take MacBook Air anywhere you go. Amazing, all-day battery life so you can leave the power adapter at home. The powerful 8-core CPU and up to 10-core GPU of the Apple M3 chip keep things running smoothly.",
+      "attachment": [
+        {
+          "id": "midnight-front",
+          "name": "Apple MacBook Air Midnight - Front",
+          "description": "Front view - Midnight",
+          "attachmentType": "picture",
+          "mimeType": "image/png",
+          "file": {
+            "createdAt": "2026-03-17T04:38:32.312Z",
+            "updatedAt": "2026-03-17T04:38:32.312Z",
+            "user": "68468068f56ee7812596f495",
+            "url": "/api/media/file/macbook_midnight_front.png",
+            "filename": "macbook_midnight_front.png",
+            "mimeType": "image/png",
+            "filesize": 19791,
+            "width": 300,
+            "height": 231,
+            "focalX": 50,
+            "focalY": 50,
+            "id": "69b8dac8ef62e7674547ed33",
+            "thumbnailURL": null
+          },
+          "validFor": {},
+          "extension": []
+        },
+        {
+          "id": "midnight-1",
+          "name": "Apple MacBook Air Midnight - Detail 1",
+          "description": "Detail 1 - Midnight",
+          "attachmentType": "picture",
+          "mimeType": "image/png",
+          "file": {
+            "createdAt": "2026-03-17T04:38:33.604Z",
+            "updatedAt": "2026-03-17T04:38:33.604Z",
+            "user": "68468068f56ee7812596f495",
+            "url": "/api/media/file/macbook_midnight_1.png",
+            "filename": "macbook_midnight_1.png",
+            "mimeType": "image/png",
+            "filesize": 6166,
+            "width": 300,
+            "height": 231,
+            "focalX": 50,
+            "focalY": 50,
+            "id": "69b8dac9ef62e7674547ed38",
+            "thumbnailURL": null
+          },
+          "validFor": {},
+          "extension": []
+        },
+        {
+          "id": "midnight-2",
+          "name": "Apple MacBook Air Midnight - Detail 2",
+          "description": "Detail 2 - Midnight",
+          "attachmentType": "picture",
+          "mimeType": "image/png",
+          "file": {
+            "createdAt": "2026-03-17T04:38:34.230Z",
+            "updatedAt": "2026-03-17T04:38:34.230Z",
+            "user": "68468068f56ee7812596f495",
+            "url": "/api/media/file/macbook_midnight_2.png",
+            "filename": "macbook_midnight_2.png",
+            "mimeType": "image/png",
+            "filesize": 3790,
+            "width": 300,
+            "height": 231,
+            "focalX": 50,
+            "focalY": 50,
+            "id": "69b8dacaef62e7674547ed3d",
+            "thumbnailURL": null
+          },
+          "validFor": {},
+          "extension": []
+        },
+        {
+          "id": "silver-front",
+          "name": "Apple MacBook Air Silver - Front",
+          "description": "Front view - Silver",
+          "attachmentType": "picture",
+          "mimeType": "image/png",
+          "file": {
+            "createdAt": "2026-03-17T04:38:34.874Z",
+            "updatedAt": "2026-03-17T04:38:34.874Z",
+            "user": "68468068f56ee7812596f495",
+            "url": "/api/media/file/macbook_silver_front.png",
+            "filename": "macbook_silver_front.png",
+            "mimeType": "image/png",
+            "filesize": 20221,
+            "width": 300,
+            "height": 231,
+            "focalX": 50,
+            "focalY": 50,
+            "id": "69b8dacaef62e7674547ed42",
+            "thumbnailURL": null
+          },
+          "validFor": {},
+          "extension": []
+        },
+        {
+          "id": "silver-1",
+          "name": "Apple MacBook Air Silver - Detail 1",
+          "description": "Detail 1 - Silver",
+          "attachmentType": "picture",
+          "mimeType": "image/png",
+          "file": {
+            "createdAt": "2026-03-17T04:38:35.389Z",
+            "updatedAt": "2026-03-17T04:38:35.389Z",
+            "user": "68468068f56ee7812596f495",
+            "url": "/api/media/file/macbook_silver_1.png",
+            "filename": "macbook_silver_1.png",
+            "mimeType": "image/png",
+            "filesize": 8752,
+            "width": 300,
+            "height": 231,
+            "focalX": 50,
+            "focalY": 50,
+            "id": "69b8dacbef62e7674547ed47",
+            "thumbnailURL": null
+          },
+          "validFor": {},
+          "extension": []
+        },
+        {
+          "id": "silver-2",
+          "name": "Apple MacBook Air Silver - Detail 2",
+          "description": "Detail 2 - Silver",
+          "attachmentType": "picture",
+          "mimeType": "image/png",
+          "file": {
+            "createdAt": "2026-03-17T04:38:35.860Z",
+            "updatedAt": "2026-03-17T04:38:35.860Z",
+            "user": "68468068f56ee7812596f495",
+            "url": "/api/media/file/macbook_silver_2.png",
+            "filename": "macbook_silver_2.png",
+            "mimeType": "image/png",
+            "filesize": 4896,
+            "width": 300,
+            "height": 231,
+            "focalX": 50,
+            "focalY": 50,
+            "id": "69b8dacbef62e7674547ed4c",
+            "thumbnailURL": null
+          },
+          "validFor": {},
+          "extension": []
+        },
+        {
+          "id": "starlight-front",
+          "name": "Apple MacBook Air Starlight - Front",
+          "description": "Front view - Starlight",
+          "attachmentType": "picture",
+          "mimeType": "image/png",
+          "file": {
+            "createdAt": "2026-03-17T04:38:36.470Z",
+            "updatedAt": "2026-03-17T04:38:36.470Z",
+            "user": "68468068f56ee7812596f495",
+            "url": "/api/media/file/macbook_starlight_front.png",
+            "filename": "macbook_starlight_front.png",
+            "mimeType": "image/png",
+            "filesize": 16641,
+            "width": 300,
+            "height": 231,
+            "focalX": 50,
+            "focalY": 50,
+            "id": "69b8daccef62e7674547ed51",
+            "thumbnailURL": null
+          },
+          "validFor": {},
+          "extension": []
+        },
+        {
+          "id": "starlight-1",
+          "name": "Apple MacBook Air Starlight - Detail 1",
+          "description": "Detail 1 - Starlight",
+          "attachmentType": "picture",
+          "mimeType": "image/png",
+          "file": {
+            "createdAt": "2026-03-17T04:38:37.016Z",
+            "updatedAt": "2026-03-17T04:38:37.016Z",
+            "user": "68468068f56ee7812596f495",
+            "url": "/api/media/file/macbook_starlight_1.png",
+            "filename": "macbook_starlight_1.png",
+            "mimeType": "image/png",
+            "filesize": 7647,
+            "width": 300,
+            "height": 231,
+            "focalX": 50,
+            "focalY": 50,
+            "id": "69b8dacdef62e7674547ed56",
+            "thumbnailURL": null
+          },
+          "validFor": {},
+          "extension": []
+        },
+        {
+          "id": "starlight-2",
+          "name": "Apple MacBook Air Starlight - Detail 2",
+          "description": "Detail 2 - Starlight",
+          "attachmentType": "picture",
+          "mimeType": "image/png",
+          "file": {
+            "createdAt": "2026-03-17T04:38:37.555Z",
+            "updatedAt": "2026-03-17T04:38:37.556Z",
+            "user": "68468068f56ee7812596f495",
+            "url": "/api/media/file/macbook_starlight_2.png",
+            "filename": "macbook_starlight_2.png",
+            "mimeType": "image/png",
+            "filesize": 4014,
+            "width": 300,
+            "height": 231,
+            "focalX": 50,
+            "focalY": 50,
+            "id": "69b8dacdef62e7674547ed5b",
+            "thumbnailURL": null
+          },
+          "validFor": {},
+          "extension": []
+        },
+        {
+          "id": "specs-parent",
+          "name": "Specifications",
+          "description": "Device technical specifications",
+          "attachmentType": "other",
+          "content": "<table><tr><td>Display</td><td>13.6-inch Liquid Retina Display</td></tr></table>",
+          "validFor": {},
+          "extension": []
+        },
+        {
+          "id": "what-in-box-parent",
+          "name": "What's in the box",
+          "description": "Package contents",
+          "attachmentType": "other",
+          "content": "<ul><li>MacBook Air (M3)</li><li>35W Dual USB-C Port Power Adapter</li></ul>",
+          "validFor": {},
+          "extension": []
+        },
+        {
+          "id": "more-details-parent",
+          "name": "More Details",
+          "description": "Detailed content for Overview and Terms tabs",
+          "attachmentType": "other",
+          "content": "Apple MacBook Air with M3 chip delivers exceptional performance and all-day battery life in a stunningly thin design.",
+          "validFor": {},
+          "extension": [
+            {
+              "key": "overview",
+              "value": "<div><h3>Supercharged by M3</h3><p>MacBook Air with M3 is an unbelievably thin laptop.</p></div>",
+              "id": "69b8dace2881c70001d90959"
+            },
+            {
+              "key": "termsAndConditions",
+              "value": "<div><h3>Terms &amp; Conditions</h3><ul><li>Standard manufacturer warranty of 1 year applies.</li></ul></div>",
+              "id": "69b8dace2881c70001d9095a"
+            }
+          ]
+        }
+      ],
+      "characteristics": {
+        "color": [
+          {
+            "value": "Midnight",
+            "id": "69b8dace2881c70001d9095b"
+          },
+          {
+            "value": "Silver",
+            "id": "69b8dace2881c70001d9095c"
+          },
+          {
+            "value": "Starlight",
+            "id": "69b8dace2881c70001d9095d"
+          }
+        ],
+        "storage": [
+          {
+            "value": "256 GB",
+            "id": "69b8dace2881c70001d9095e"
+          },
+          {
+            "value": "512 GB",
+            "id": "69b8dace2881c70001d9095f"
+          }
+        ],
+        "features": [
+          {
+            "key": "Display",
+            "Value": "13.6 inches",
+            "id": "69b8dace2881c70001d90960"
+          },
+          {
+            "key": "Display Resolution",
+            "Value": "2560 x 1664 pixels",
+            "id": "69b8dace2881c70001d90961"
+          },
+          {
+            "key": "Camera",
+            "Value": "1080p FaceTime HD",
+            "id": "69b8dace2881c70001d90962"
+          },
+          {
+            "key": "Brand",
+            "Value": "Apple",
+            "id": "69b8dace2881c70001d90963"
+          },
+          {
+            "key": "CPU",
+            "Value": "Apple M3 (8-core)",
+            "id": "69b8dace2881c70001d90964"
+          },
+          {
+            "key": "OS",
+            "Value": "macOS",
+            "id": "69b8dace2881c70001d90965"
+          },
+          {
+            "key": "Battery",
+            "Value": "Up to 18 hours",
+            "id": "69b8dace2881c70001d90966"
+          },
+          {
+            "key": "RAM",
+            "Value": "16GB",
+            "id": "69b8dace2881c70001d90967"
+          },
+          {
+            "key": "Weight",
+            "Value": "1.24 kg",
+            "id": "69b8dace2881c70001d90968"
+          },
+          {
+            "key": "Warranty",
+            "Value": "1 Year",
+            "id": "69b8dace2881c70001d90969"
+          }
+        ],
+        "extension": []
+      },
+      "variants": [
+        {
+          "variantId": 2000256867,
+          "name": "Apple 2024 MacBook Air 256GB Midnight",
+          "characteristics": {
+            "color": [],
+            "storage": [],
+            "features": [],
+            "extension": []
+          },
+          "id": "69b8dace2881c70001d9096a",
+          "attachment": [],
+          "price": [],
+          "extension": []
+        },
+        {
+          "variantId": 2000269996,
+          "name": "Apple 2024 MacBook Air 512GB Midnight",
+          "characteristics": {
+            "color": [],
+            "storage": [],
+            "features": [],
+            "extension": []
+          },
+          "id": "69b8dace2881c70001d9096b",
+          "attachment": [],
+          "price": [],
+          "extension": []
+        },
+        {
+          "variantId": 2000256865,
+          "name": "Apple 2024 MacBook Air 256GB Silver",
+          "characteristics": {
+            "color": [],
+            "storage": [],
+            "features": [],
+            "extension": []
+          },
+          "id": "69b8dace2881c70001d9096c",
+          "attachment": [],
+          "price": [],
+          "extension": []
+        },
+        {
+          "variantId": 2000269998,
+          "name": "Apple 2024 MacBook Air 512GB Silver",
+          "characteristics": {
+            "color": [],
+            "storage": [],
+            "features": [],
+            "extension": []
+          },
+          "id": "69b8dace2881c70001d9096d",
+          "attachment": [],
+          "price": [],
+          "extension": []
+        },
+        {
+          "variantId": 2000269997,
+          "name": "Apple 2024 MacBook Air 256GB Starlight",
+          "characteristics": {
+            "color": [],
+            "storage": [],
+            "features": [],
+            "extension": []
+          },
+          "id": "69b8dace2881c70001d9096e",
+          "attachment": [],
+          "price": [],
+          "extension": []
+        },
+        {
+          "variantId": 2000256869,
+          "name": "Apple 2024 MacBook Air 512GB Starlight",
+          "characteristics": {
+            "color": [],
+            "storage": [],
+            "features": [],
+            "extension": []
+          },
+          "id": "69b8dace2881c70001d9096f",
+          "attachment": [],
+          "price": [],
+          "extension": []
+        }
+      ],
+      "id": "69b8daceef62e7674547ed62",
+      "price": [],
+      "extension": []
+    }
+  ],
+  "totalDocs": 2,
+  "limit": 3,
+  "totalPages": 1,
+  "page": 1,
+  "pagingCounter": 1,
+  "hasPrevPage": false,
+  "hasNextPage": false,
+  "prevPage": null,
+  "nextPage": null,
+  "warning": "Some devices not found: 2000252188"
+}

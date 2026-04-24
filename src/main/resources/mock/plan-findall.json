@@ -1,0 +1,257 @@
+{
+	"docs": [
+		{
+			"createdAt": "2026-01-22T10:29:21.854Z",
+			"updatedAt": "2026-02-18T20:44:23.749Z",
+			"externalId": "2000253628",
+			"name": "Unlimited Plan",
+			"attachment": [
+				{
+					"id": "promo-unlimited-plan-001",
+					"name": "Premium extras",
+					"attachmentType": "text",
+					"content": "<ul><li>Free streaming subscription for 3 months</li><li>Priority customer support 24/7</li><li>Unlimited hotspot tetheringgg</li></ul>",
+					"validFor": {},
+					"extension": [
+						{
+							"key": "position",
+							"value": "promotion",
+							"id": "ext-promo-up-001"
+						}
+					]
+				}
+			],
+			"price": [],
+			"characteristics": {
+				"allowance": [
+					{
+						"type": "data",
+						"value": "Unlimited",
+						"extension": [],
+						"id": "6971fbd5c776b628938a09e5"
+					},
+					{
+						"type": "sms",
+						"value": "Unlimited",
+						"extension": [],
+						"id": "6971fbe1c776b628938a09e6"
+					},
+					{
+						"type": "voice",
+						"value": "Unlimited",
+						"extension": [],
+						"id": "6971fbe5c776b628938a09e7"
+					},
+					{
+						"type": "roaming-data",
+						"value": "Unlimited",
+						"extension": [],
+						"id": "6971fbe9c776b628938a09e8"
+					},
+					{
+						"type": "roaming-voice",
+						"value": "Unlimited",
+						"extension": [],
+						"id": "6971fbf1c776b628938a09e9"
+					},
+					{
+						"type": "international-calls",
+						"value": "Unlimited",
+						"extension": [],
+						"id": "6971fbf6c776b628938a09ea"
+					}
+				],
+				"features": [],
+				"extension": []
+			},
+			"extension": [],
+			"id": "6971fc0103cc513f4e2794d1"
+		},
+		{
+			"createdAt": "2026-01-22T10:27:45.710Z",
+			"updatedAt": "2026-02-18T20:44:23.373Z",
+			"externalId": "2000251697",
+			"name": "Economy Plan",
+			"attachment": [
+				{
+					"id": "promo-economy-plan-001",
+					"name": "On recharge",
+					"attachmentType": "text",
+					"content": "<ul><li>Extra 10,000 MB data on every recharge</li><li>Free 200 SMS to any network</li><li>10% cashback on first recharge</li></ul>",
+					"validFor": {},
+					"extension": [
+						{
+							"key": "position",
+							"value": "promotion",
+							"id": "ext-promo-ep-001"
+						}
+					]
+				}
+			],
+			"price": [],
+			"characteristics": {
+				"allowance": [
+					{
+						"type": "data",
+						"value": "20,000 MB",
+						"extension": [],
+						"id": "6971fb49c776b628938a09e0"
+					},
+					{
+						"type": "voice",
+						"value": "Unlimited voice calls",
+						"extension": [],
+						"id": "6971fb53c776b628938a09e1"
+					},
+					{
+						"type": "sms",
+						"value": "1000 SMS/Day",
+						"extension": [],
+						"id": "6971fb59c776b628938a09e2"
+					},
+					{
+						"type": "roaming-data",
+						"value": "5,000 MB",
+						"extension": [],
+						"id": "6971fb64c776b628938a09e3"
+					}
+				],
+				"features": [],
+				"extension": []
+			},
+			"extension": [],
+			"id": "6971fba103cc513f4e279489"
+		},
+		{
+			"externalId": "2000251334",
+			"name": "Gold-5G-Unlimited",
+			"description": "This is the good plan",
+			"attachment": [
+				{
+					"id": "plan-logo",
+					"name": "FFF",
+					"attachmentType": "other",
+					"content": "<ul><li>Free streaming subscription for 399 months</li><li>Priority customer support 24/7</li><li>Unlimited hotspot tethering</li></ul>",
+					"validFor": {},
+					"extension": [
+						{
+							"key": "position",
+							"value": "promotion",
+							"id": "ext-promo-bp-001"
+						}
+					]
+				}
+			],
+			"price": [
+				{
+					"id": "1",
+					"type": "recurring",
+					"amount": {
+						"value": "100",
+						"currency": "EUR"
+					}
+				}
+			],
+			"characteristics": {
+				"allowance": [
+					{
+						"type": "data",
+						"value": "10,000 MB",
+						"extension": [],
+						"id": "6971fab2c776b628938a09dd"
+					},
+					{
+						"type": "voice",
+						"value": "100 Minutes",
+						"extension": [],
+						"id": "6971fac2c776b628938a09de"
+					},
+					{
+						"type": "sms",
+						"value": "10 SMS/Day",
+						"extension": [
+							{
+								"key": "Gift",
+								"value": "Valid",
+								"id": "699746f68b094b5e9a1f1a8f"
+							}
+						],
+						"id": "6971fae9c776b628938a09df"
+					}
+				],
+				"features": [],
+				"extension": []
+			},
+			"extension": [
+				{
+					"key": "TEST2",
+					"value": "1"
+				}
+			]
+		},
+		{
+			"createdAt": "2026-01-22T10:09:33.126Z",
+			"updatedAt": "2026-02-18T20:32:20.343Z",
+			"externalId": "2000265716",
+			"name": "Budget Talk",
+			"attachment": [
+				{
+					"id": "promo-budget-talk-001",
+					"name": "On activation",
+					"attachmentType": "text",
+					"content": "<ul><li>Bonus 5,000 MB data for the first 30 days</li><li>Free 5G network access included</li><li>Unlimited calls to 3 favorite numbers</li></ul>",
+					"validFor": {},
+					"extension": [
+						{
+							"key": "position",
+							"value": "promotion",
+							"id": "ext-promo-bt-001"
+						}
+					]
+				}
+			],
+			"price": [],
+			"characteristics": {
+				"allowance": [
+					{
+						"type": "data",
+						"value": "10,000 MB",
+						"extension": [],
+						"id": "6971f70ec2bf564002b259b8"
+					},
+					{
+						"type": "voice",
+						"value": "Unlimited voice calls",
+						"extension": [],
+						"id": "6971f72fc2bf564002b259b9"
+					},
+					{
+						"type": "sms",
+						"value": "50 SMS/Day",
+						"extension": [],
+						"id": "6971f73ec2bf564002b259ba"
+					},
+					{
+						"type": "other",
+						"value": "Free 5G Network access",
+						"extension": [],
+						"id": "6971f74ac2bf564002b259bb"
+					}
+				],
+				"features": [],
+				"extension": []
+			},
+			"extension": [],
+			"id": "6971f75d03cc513f4e2793d7"
+		}
+	],
+	"totalDocs": 4,
+	"limit": 6,
+	"totalPages": 1,
+	"page": 1,
+	"pagingCounter": 1,
+	"hasPrevPage": false,
+	"hasNextPage": false,
+	"prevPage": null,
+	"nextPage": null
+}

@@ -106,8 +106,15 @@ public class MagnoliaPlanTranslator {
 			a.setContent(ma.getContent());
 			a.setUrl(ma.getUrl());
 			a.setValidFor(normalizeValidFor(ma.getValidFor()));
-			List<Extension> extList = mapExtensionRows(ma.getExtension());
-			a.setExtension(extList == null || extList.isEmpty() ? null : extList);
+//			List<Extension> extList = mapExtensionRows(ma.getExtension());
+			List<Extension> extList = new ArrayList<>();
+			Extension extension = new Extension();
+			extension.setId("ext-promo-up-001");
+			extension.setKey("position");
+			extension.setValue("promotion");
+			extList.add(extension);
+			a.setExtension(extList);
+//			a.setExtension(extList == null || extList.isEmpty() ? null : extList);
 			out.add(a);
 		}
 		return out;

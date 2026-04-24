@@ -5,7 +5,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import lombok.extern.slf4j.Slf4j;
 
-@SpringBootApplication
+@SpringBootApplication(exclude = {
+		org.apache.camel.spring.boot.CamelAutoConfiguration.class
+})
 @Slf4j
 public class OptimaAdapter {
 
