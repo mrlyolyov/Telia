@@ -1,5 +1,7 @@
 package com.optima.cms.model.device;
 
+import com.fasterxml.jackson.databind.JsonNode;
+import com.optima.cms.model.plan.Extension;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -11,11 +13,14 @@ public class DeviceAttachment {
 
 	private String id;
 	private String name;
-	private String attachmentType;
 	private String mimeType;
-	/** Media asset id when {@code attachmentType} is {@code picture} (or similar). */
-	private String file;
+	/**
+	 * Media payload for binary attachments: object shape from Magnolia, with {@code url} set to the DAM fetch path
+	 * ({@code attachment.url} + JCR id). No top-level {@code url} on the attachment.
+	 */
+	private JsonNode file;
 	private String content;
-	private List<DeviceKeyValue> extension;
-
+	private String attachmentType;
+	private JsonNode validFor;
+	private List<Extension> extension;
 }

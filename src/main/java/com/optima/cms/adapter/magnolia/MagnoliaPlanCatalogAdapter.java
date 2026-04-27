@@ -2,11 +2,16 @@ package com.optima.cms.adapter.magnolia;
 
 import com.optima.cms.adapter.magnolia.dto.plan.MagnoliaPlan;
 import com.optima.cms.adapter.magnolia.plan.MagnoliaPlanTranslator;
-import com.optima.cms.model.plan.*;
+import com.optima.cms.model.plan.Allowance;
+import com.optima.cms.model.plan.Extension;
+import com.optima.cms.model.plan.FindAllRequest;
+import com.optima.cms.model.plan.Plan;
+import com.optima.cms.model.plan.PlanFindAllResult;
 import com.optima.cms.port.PlanCatalogPort;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 
+import java.util.ArrayList;
 import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Objects;
@@ -31,16 +36,20 @@ public class MagnoliaPlanCatalogAdapter implements PlanCatalogPort {
 	}
 
 	@Override
-	public List<Plan> listPlans(FindAllRequest request) {
+	public PlanFindAllResult listPlans(FindAllRequest request) {
 		List<MagnoliaPlan> all = magnoliaClient.getPlans(request);
+		List<String> requestedIds = request != null ? request.getExternalId() : null;
+		Set<String> wanted = toWantedExternalIds(requestedIds);
 		List<MagnoliaPlan> selected = applyExternalIdFilter(all, request);
-		return selected.stream().map(magnoliaPlanTranslator::adaptPlan).toList();
+		String warning = buildMissingExternalIdWarning(wanted, selected, requestedIds);
+		List<Plan> plans = selected.stream().map(magnoliaPlanTranslator::adaptPlan).toList();
+		return new PlanFindAllResult(plans, warning);
 	}
 
 	/**
 	 * When the request lists {@code externalId} values, keep only Magnolia plans whose {@code externalId}
-	 * is in that set (trimmed, exact match). If that yields no rows, returns the full {@code all} list.
-	 * When {@code externalId} is null or empty, returns {@code all} unchanged.
+	 * is in that set (trimmed, exact match). If nothing matches, returns an empty list. When {@code externalId}
+	 * is null or empty, returns {@code all} unchanged.
 	 */
 	private List<MagnoliaPlan> applyExternalIdFilter(List<MagnoliaPlan> all, FindAllRequest request) {
 		if (all == null || all.isEmpty()) {
@@ -62,13 +71,60 @@ public class MagnoliaPlanCatalogAdapter implements PlanCatalogPort {
 				.filter(Objects::nonNull)
 				.filter(p -> p.getExternalId() != null && wanted.contains(p.getExternalId().trim()))
 				.toList();
-		if (!matched.isEmpty()) {
-			return matched;
+		if (matched.isEmpty()) {
+			log.info("No plans matched externalId filter {}; returning empty docs", wanted);
 		}
-		log.info("No plans matched externalId filter {}; returning full catalog ({} plans)", wanted, all.size());
-		return all;
+		return matched;
 	}
 
+	private static Set<String> toWantedExternalIds(List<String> requestedIds) {
+		if (requestedIds == null || requestedIds.isEmpty()) {
+			return Set.of();
+		}
+		return requestedIds.stream()
+				.filter(Objects::nonNull)
+				.map(String::trim)
+				.filter(s -> !s.isEmpty())
+				.collect(Collectors.toCollection(LinkedHashSet::new));
+	}
+
+	/**
+	 * Requested {@code externalId} values that do not appear on any plan in {@code selected} (the response rows).
+	 */
+	private static String buildMissingExternalIdWarning(Set<String> wanted, List<MagnoliaPlan> selected, List<String> requestedOrder) {
+		if (wanted.isEmpty()) {
+			return null;
+		}
+		Set<String> returned = selected.stream()
+				.filter(Objects::nonNull)
+				.map(MagnoliaPlan::getExternalId)
+				.filter(Objects::nonNull)
+				.map(String::trim)
+				.collect(Collectors.toSet());
+		List<String> missing = new ArrayList<>();
+		if (requestedOrder != null) {
+			for (String raw : requestedOrder) {
+				if (raw == null) {
+					continue;
+				}
+				String id = raw.trim();
+				if (id.isEmpty() || !wanted.contains(id) || returned.contains(id) || missing.contains(id)) {
+					continue;
+				}
+				missing.add(id);
+			}
+		} else {
+			for (String id : wanted) {
+				if (!returned.contains(id)) {
+					missing.add(id);
+				}
+			}
+		}
+		if (missing.isEmpty()) {
+			return null;
+		}
+		return "Some plans not found: " + String.join(", ", missing);
+	}
 
 	private static Extension ext(String key, String value, String id) {
 		Extension e = new Extension();

@@ -2,10 +2,9 @@ package com.optima.cms.service;
 
 import com.optima.cms.model.plan.FindAllRequest;
 import com.optima.cms.model.plan.Plan;
+import com.optima.cms.model.plan.PlanFindAllResult;
 import com.optima.cms.port.PlanCatalogPort;
 import org.springframework.stereotype.Service;
-
-import java.util.List;
 
 @Service
 public class PlanCatalogService {
@@ -16,7 +15,7 @@ public class PlanCatalogService {
 		this.planCatalogPort = planCatalogPort;
 	}
 
-	public List<Plan> listPlans(FindAllRequest request) {
+	public PlanFindAllResult listPlans(FindAllRequest request) {
 		return planCatalogPort.listPlans(request);
 	}
 

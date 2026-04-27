@@ -1,17 +1,15 @@
 package com.optima.cms.adapter.magnolia;
 
-import com.fasterxml.jackson.databind.JsonNode;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.node.ArrayNode;
-import com.fasterxml.jackson.databind.node.ObjectNode;
+import com.optima.cms.adapter.magnolia.device.MagnoliaDeviceTranslator;
+import com.optima.cms.adapter.magnolia.dto.device.MagnoliaDevice;
+import com.optima.cms.model.device.Device;
+import com.optima.cms.model.device.DeviceFindAllResult;
 import com.optima.cms.model.plan.FindAllRequest;
 import com.optima.cms.port.DeviceCatalogPort;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.core.io.ClassPathResource;
 import org.springframework.stereotype.Component;
 
-import java.io.IOException;
-import java.io.InputStream;
+import java.util.ArrayList;
 import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Objects;
@@ -19,87 +17,128 @@ import java.util.Set;
 import java.util.stream.Collectors;
 
 /**
- * Magnolia-backed device catalog. Until Magnolia exposes a delivery API, serves a classpath mock
- * ({@code mock/device-findall.json}) with the full response envelope.
+ * Magnolia-backed implementation of {@link DeviceCatalogPort}: HTTP client + translation to API models
+ * (same flow as {@link MagnoliaPlanCatalogAdapter}).
  */
 @Component
 @Slf4j
 public class MagnoliaDeviceCatalogAdapter implements DeviceCatalogPort {
 
-	private static final String MOCK_RESOURCE = "mock/device-findall.json";
+	private final MagnoliaClient magnoliaClient;
+	private final MagnoliaDeviceTranslator magnoliaDeviceTranslator;
 
-	private final ObjectMapper objectMapper;
-	private volatile JsonNode cachedRoot;
-
-	public MagnoliaDeviceCatalogAdapter(ObjectMapper objectMapper) {
-		this.objectMapper = objectMapper;
+	public MagnoliaDeviceCatalogAdapter(MagnoliaClient magnoliaClient, MagnoliaDeviceTranslator magnoliaDeviceTranslator) {
+		this.magnoliaClient = magnoliaClient;
+		this.magnoliaDeviceTranslator = magnoliaDeviceTranslator;
 	}
 
 	@Override
-	public JsonNode getDeviceCatalog(FindAllRequest request) {
-		JsonNode base = loadMockRoot();
-		return applyExternalIdFilter(base, request);
+	public DeviceFindAllResult findDevicesByExternalId(String externalId) {
+		String id = externalId == null ? "" : externalId.trim();
+		if (id.isEmpty()) {
+			return new DeviceFindAllResult(List.of(), null);
+		}
+		List<MagnoliaDevice> all = magnoliaClient.getDevices(null);
+		if (all == null || all.isEmpty()) {
+			return new DeviceFindAllResult(List.of(), "Some devices not found: " + id);
+		}
+		List<MagnoliaDevice> matched = all.stream()
+				.filter(Objects::nonNull)
+				.filter(d -> d.getExternalId() != null && id.equals(d.getExternalId().trim()))
+				.toList();
+		List<Device> devices = matched.stream().map(magnoliaDeviceTranslator::adaptDevice).toList();
+		String warning = devices.isEmpty() ? "Some devices not found: " + id : null;
+		return new DeviceFindAllResult(devices, warning);
 	}
 
-	private JsonNode loadMockRoot() {
-		JsonNode local = cachedRoot;
-		if (local != null) {
-			return local;
-		}
-		synchronized (this) {
-			if (cachedRoot != null) {
-				return cachedRoot;
-			}
-			ClassPathResource resource = new ClassPathResource(MOCK_RESOURCE);
-			try (InputStream in = resource.getInputStream()) {
-				cachedRoot = objectMapper.readTree(in);
-				return cachedRoot;
-			} catch (IOException e) {
-				throw new IllegalStateException("Failed to read classpath " + MOCK_RESOURCE, e);
-			}
-		}
+	@Override
+	public DeviceFindAllResult listDevices(FindAllRequest request) {
+		List<MagnoliaDevice> all = magnoliaClient.getDevices(request);
+		List<String> requestedIds = request != null ? request.getExternalId() : null;
+		Set<String> wanted = toWantedExternalIds(requestedIds);
+		List<MagnoliaDevice> selected = applyExternalIdFilter(all, request);
+		String warning = buildMissingExternalIdWarning(wanted, selected, requestedIds);
+		List<Device> devices = selected.stream().map(magnoliaDeviceTranslator::adaptDevice).toList();
+		return new DeviceFindAllResult(devices, warning);
 	}
 
 	/**
-	 * When {@code externalId} is provided, keep only matching docs (trimmed, exact match on {@code externalId}).
-	 * If none match, returns the full mock. Updates {@code totalDocs} when filtering returns a non-empty subset.
+	 * When the request lists {@code externalId} values, keep only devices whose {@code externalId}
+	 * is in that set (trimmed, exact match). If nothing matches, returns an empty list (same idea as
+	 * {@link #findDevicesByExternalId}). When {@code externalId} is null or empty, returns {@code all} unchanged.
 	 */
-	private JsonNode applyExternalIdFilter(JsonNode base, FindAllRequest request) {
-		if (base == null || !base.isObject()) {
-			return base;
+	private List<MagnoliaDevice> applyExternalIdFilter(List<MagnoliaDevice> all, FindAllRequest request) {
+		if (all == null || all.isEmpty()) {
+			return List.of();
 		}
-		JsonNode docsNode = base.get("docs");
-		if (docsNode == null || !docsNode.isArray()) {
-			return base;
+		List<String> requestedIds = request != null ? request.getExternalId() : null;
+		if (requestedIds == null || requestedIds.isEmpty()) {
+			return all;
 		}
-		List<String> requested = request != null ? request.getExternalId() : null;
-		if (requested == null || requested.isEmpty()) {
-			return base;
-		}
-		Set<String> wanted = requested.stream()
+		Set<String> wanted = requestedIds.stream()
 				.filter(Objects::nonNull)
 				.map(String::trim)
 				.filter(s -> !s.isEmpty())
 				.collect(Collectors.toCollection(LinkedHashSet::new));
 		if (wanted.isEmpty()) {
-			return base;
+			return all;
 		}
-		ArrayNode filtered = objectMapper.createArrayNode();
-		for (JsonNode d : docsNode) {
-			if (d != null && d.isObject() && d.hasNonNull("externalId")) {
-				String ext = d.get("externalId").asText("").trim();
-				if (wanted.contains(ext)) {
-					filtered.add(d);
+		List<MagnoliaDevice> matched = all.stream()
+				.filter(Objects::nonNull)
+				.filter(d -> d.getExternalId() != null && wanted.contains(d.getExternalId().trim()))
+				.toList();
+		if (matched.isEmpty()) {
+			log.info("No devices matched externalId filter {}; returning empty docs", wanted);
+		}
+		return matched;
+	}
+
+	private static Set<String> toWantedExternalIds(List<String> requestedIds) {
+		if (requestedIds == null || requestedIds.isEmpty()) {
+			return Set.of();
+		}
+		return requestedIds.stream()
+				.filter(Objects::nonNull)
+				.map(String::trim)
+				.filter(s -> !s.isEmpty())
+				.collect(Collectors.toCollection(LinkedHashSet::new));
+	}
+
+	/**
+	 * Requested {@code externalId} values that do not appear on any device in {@code selected} (the response rows).
+	 */
+	private static String buildMissingExternalIdWarning(Set<String> wanted, List<MagnoliaDevice> selected, List<String> requestedOrder) {
+		if (wanted.isEmpty()) {
+			return null;
+		}
+		Set<String> returned = selected.stream()
+				.filter(Objects::nonNull)
+				.map(MagnoliaDevice::getExternalId)
+				.filter(Objects::nonNull)
+				.map(String::trim)
+				.collect(Collectors.toSet());
+		List<String> missing = new ArrayList<>();
+		if (requestedOrder != null) {
+			for (String raw : requestedOrder) {
+				if (raw == null) {
+					continue;
+				}
+				String id = raw.trim();
+				if (id.isEmpty() || !wanted.contains(id) || returned.contains(id) || missing.contains(id)) {
+					continue;
+				}
+				missing.add(id);
+			}
+		} else {
+			for (String id : wanted) {
+				if (!returned.contains(id)) {
+					missing.add(id);
 				}
 			}
 		}
-		if (filtered.isEmpty()) {
-			log.info("No device documents matched externalId filter {}; returning full mock catalog", wanted);
-			return base;
+		if (missing.isEmpty()) {
+			return null;
 		}
-		ObjectNode copy = base.deepCopy();
-		copy.set("docs", filtered);
-		copy.put("totalDocs", filtered.size());
-		return copy;
+		return "Some devices not found: " + String.join(", ", missing);
 	}
 }

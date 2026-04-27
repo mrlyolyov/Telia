@@ -1,6 +1,6 @@
 package com.optima.cms.port;
 
-import com.fasterxml.jackson.databind.JsonNode;
+import com.optima.cms.model.device.DeviceFindAllResult;
 import com.optima.cms.model.plan.FindAllRequest;
 
 /**
@@ -9,8 +9,14 @@ import com.optima.cms.model.plan.FindAllRequest;
 public interface DeviceCatalogPort {
 
 	/**
-	 * Full device catalog response (Magnolia-style envelope: {@code docs}, pagination, optional {@code warning}).
+	 * Device catalog entries (Magnolia delivery shape, mapped to {@link Device}).
 	 */
-	JsonNode getDeviceCatalog(FindAllRequest request);
+	DeviceFindAllResult listDevices(FindAllRequest request);
+
+	/**
+	 * Devices whose {@code externalId} equals the given value (trimmed). Empty {@code devices} and a
+	 * {@link DeviceFindAllResult#warning} when nothing matches Magnolia delivery.
+	 */
+	DeviceFindAllResult findDevicesByExternalId(String externalId);
 
 }

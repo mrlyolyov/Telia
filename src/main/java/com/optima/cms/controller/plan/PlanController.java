@@ -13,7 +13,9 @@ import com.optima.cms.model.plan.Characteristics;
 import com.optima.cms.model.plan.Extension;
 import com.optima.cms.model.plan.FindAllRequest;
 import com.optima.cms.model.plan.Plan;
+import com.optima.cms.model.plan.PlanFindAllResult;
 import com.optima.cms.service.PlanCatalogService;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.annotation.PostConstruct;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.core.io.ClassPathResource;
@@ -30,6 +32,7 @@ import static com.optima.cms.model.plan.Allowance.createAllowance;
  */
 @RestController
 @RequestMapping("/rest/api")
+@Tag(name = "Plan")
 @Slf4j
 public class PlanController {
 
@@ -55,11 +58,11 @@ public class PlanController {
 		}
 	}
 
-	@GetMapping("/ping")
-	public Plan ping() {
-		log.info("ping");
-		return stubUnlimitedPlan();
-	}
+//	@GetMapping("/ping")
+//	public Plan ping() {
+//		log.info("ping");
+//		return stubUnlimitedPlan();
+//	}
 
 	/**
 	 * {@code POST /rest/api/plan/findall} (selfservice plan catalog).
@@ -68,14 +71,15 @@ public class PlanController {
 	@SuppressWarnings("unused")
 	@PostMapping("/plan/findall")
 	public DocsEnvelope<Plan> findAll(@RequestBody FindAllRequest request) {
-		return DocsEnvelope.of(planCatalogService.listPlans(request));
+		PlanFindAllResult result = planCatalogService.listPlans(request);
+		return DocsEnvelope.of(result.plans(), result.warning());
 //		return planFindAllFixture;
 	}
 
-	@GetMapping("/test")
-	public Plan test() {
-		return planCatalogService.getFirstPlanForDemo();
-	}
+//	@GetMapping("/test")
+//	public Plan test() {
+//		return planCatalogService.getFirstPlanForDemo();
+//	}
 
 	private static Plan stubUnlimitedPlan() {
 		Plan plan = new Plan();

@@ -19,8 +19,10 @@ public class ContentCard {
 	private String updatedAt;
 	private String title;
 	private String description;
-	private String page;
-	private String cardType;
+	/** Target UI page (required in contracts; may be null if omitted in a payload). */
+	private ContentCardPage page;
+	/** Card layout / purpose (required in contracts; may be null if omitted in a payload). */
+	private ContentCardType cardType;
 	private List<ContentCardItem> cards;
 	private Boolean active;
 	@JsonInclude(JsonInclude.Include.ALWAYS)

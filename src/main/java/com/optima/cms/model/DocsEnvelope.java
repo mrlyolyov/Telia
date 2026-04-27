@@ -29,7 +29,14 @@ public class DocsEnvelope<T> {
 	private Integer prevPage;
 	private Integer nextPage;
 
+	/** Human-readable notice (e.g. missing requested {@code externalId} values); omitted from JSON when null. */
+	private String warning;
+
 	public static <T> DocsEnvelope<T> of(List<T> docs) {
-		return new DocsEnvelope<>(docs != null ? docs : List.of(), null, null, null, null, null, null, null, null, null);
+		return of(docs, null);
+	}
+
+	public static <T> DocsEnvelope<T> of(List<T> docs, String warning) {
+		return new DocsEnvelope<>(docs != null ? docs : List.of(), null, null, null, null, null, null, null, null, null, warning);
 	}
 }
